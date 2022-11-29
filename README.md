@@ -23,4 +23,4 @@ HP tiene un sistema de puntacion hacia cada equipo donde dan su opinion sobre cu
 Dell es una pagina en la que no encontramos algo en especifico que nos haya deslumbrado pero si nos gusta para poder ir sacando ideas de diferentes cosas.
 
 Jeronimo Renaldi: Como integrantes del equipo pretendo......... y tengo como objetivo
-Nicolas Dekker: Como integrante del equipo pretendo ........... y tengo como objetivo
+Nicolas Dekker: Como integrante del equipo pretendo generar un buen espacio de trabajo junto a mis compañero, poder trabajar bien tanto en conjunto como indicidualmente y tengo como objetivo poder realizar un buen proyecto que pueda sorprender y que funcione de 10.
