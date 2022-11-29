@@ -7,3 +7,4 @@ notebook y una seccion de servicios el cual contendra distintas limpiezas depend
 (Equipos design y office).
 
 Jeronimo Renaldi: Como integrantes del equipo pretendo......... y tengo como objetivo
+Nicolas Dekker: Como integrante del equipo pretendo ........... y tengo como objetivo
