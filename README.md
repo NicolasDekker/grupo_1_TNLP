@@ -6,4 +6,4 @@ Como grupo elegimos desarrollar una applicacion web, la cual tiene como idea pri
 notebook y una seccion de servicios el cual contendra distintas limpiezas dependiendo del equipo que tenga el cliente
 (Equipos design y office).
 
-Jeronimo Renaldi: Como integrantes del equipo pretendo........ y tengo como objetivo
+Jeronimo Renaldi: Como integrantes del equipo pretendo......... y tengo como objetivo
