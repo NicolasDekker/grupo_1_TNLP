@@ -1,8 +1,12 @@
 Presentacion del proyecto y los integrantes.
  
-Como grupo elegimos desarrollar una aplicación web, la cual tiene como idea principal ofrecer producto de venta de
+Como grupo elegimos desarrollar una aplicación web, la cual tiene como idea principal ofrecer producto de
 notebook y una seccion de servicios que ofrecerá distintas limpiezas dependiendo del equipo que tenga el cliente
-(design u office).Se apunta al publico gamer y design que requieren equipos de alta gama.
+(gamer, design u office).Se apunta al publico gamer y design que requieren equipos de alta gama en ventas.
+
+Jeronimo Renaldi: Como integrante del equipo pretendo aportar conocimiento y tengo como objetivo poder cumplir con los sprints pactados sin demoras ni problemas. Tratando de generar una aplicacion web escalable y con buenas practicas.
+Nicolas Dekker: Como integrante del equipo pretendo generar un buen espacio de trabajo junto a mis compañero y poder trabajar bien tanto en conjunto como individualmente .Tengo como objetivo poder realizar un buen proyecto que pueda sorprender y funcione de 10.
+Gabriel Callegari: Mi objetivo es relizar un gran proyecto y que todos podamos sacar lo mejor de nosotros al hacerlo.
 
 Sitios de referencia:
 
@@ -21,8 +25,8 @@ HP tiene un sistema de puntacion de cada eqipo para poder dejar una opinion sobr
 - MELON: https://www.melonstore.com.ar/productos/sillon-gamer-melon-butaca-gaming-2-almohadones-90042/
 En Melon no se basan en los mismos productos, pero nos encantó el diseño de ventas y facturación.
 
-Jeronimo Renaldi: Como integrante del equipo pretendo aportar conocimiento y tengo como objetivo poder cumplir con los sprints pactados sin demoras ni problemas. Tratando de generar un sitio web o aplicacion web escalable y con buenas practicas.
-Nicolas Dekker: Como integrante del equipo pretendo generar un buen espacio de trabajo junto a mis compañero y poder trabajar bien tanto en conjunto como individualmente .Tengo como objetivo poder realizar un buen proyecto que pueda sorprender y funcione de 10.
-Gabriel Callegari: Mi objetivo es relizar un gran proyecto y que todos podamos sacar lo mejor de nosotros al hacerlo.
+Link a GitHub:
+https://github.com/NicolasDekker/grupo_1_TNLP
 
-
+Link a Trello:
+https://trello.com/b/BGXtPFJ8/digital-house-grupo-1
