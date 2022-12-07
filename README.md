@@ -11,6 +11,9 @@ Jeronimo Renaldi: Como integrante del equipo pretendo aportar conocimiento y ten
 
 Nicolas Dekker: Como integrante del equipo pretendo generar un buen espacio de trabajo junto a mis compañero y poder trabajar bien tanto en conjunto como individualmente .Tengo como objetivo poder realizar un buen proyecto que pueda sorprender y funcione de 10.
 
+Tomas Rodriguez Aranzasti: Como integrante del equipo me gustaria realizar un buen proyecto final, a la par de ir adquiriendo conocimientos junto a un buen ambiente entre compañeros.
+
+
 Gabriel Callegari: Mi objetivo es que todos los integrantes del equipo podamos desarrollar un buen proyecto y sacar lo mejor de nosotros al hacerlo.
 
 Sitios de referencia:
