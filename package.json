@@ -1,0 +1,24 @@
+{
+  "name": "grupo_1_tnlp",
+  "version": "1.0.0",
+  "description": "Presentacion del proyecto y los integrantes",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolasDekker/grupo_1_TNLP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicolasDekker/grupo_1_TNLP/issues"
+  },
+  "homepage": "https://github.com/NicolasDekker/grupo_1_TNLP#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
