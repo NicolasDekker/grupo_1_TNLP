@@ -23,7 +23,7 @@ app.get('/register', (req,res) => {
 })
 
 app.get('/equipos', (req,res) => {
-    res.sendFile(path.resolve('./views/login.html'))
+    res.sendFile(path.resolve('./views/equipos.html'))
 })
 
 app.get('/carrito', (req,res) => {
