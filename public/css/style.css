@@ -1,5 +1,6 @@
 .img-main{
     background-image: url("/img/img-first.svg");
+    background-size:cover;
 }
 
 section div.section-bg-color{
@@ -14,19 +15,21 @@ section div.section-bg-color{
     background-color: rgba(129, 129, 129, 0.4);
 }
 
+.img-main-equipos{
+    background-image: url("/img/img-equipos.svg");
+    height: 600px;
+}
+
+.card:hover{
+    box-shadow: 0px 0px 12px rgb(194, 0, 253)
+}
+
+.card-title{
+    height: 90px;
+}
 
 @media(min-width:768px){
     .style-nav{
         font-size: 13px;
     }
 }
-
-.img-main-equipos{
-    background-image: url(./img/img-equipos.svg);
-}
-
-
-.card:hover{
-    box-shadow: 0px 0px 12px rgb(194, 0, 253)
-}
-
