@@ -88,6 +88,11 @@ max-width: 230px;
 
 
 /* EQUIPOS */
+
+.section-bg-color-equipos{
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 6%, rgba(180,3,49,1) 50%, rgba(45,26,67,1) 100%);
+}
 .cartas{
     background-color: rgba(129, 129, 129, 0.4);
 }
@@ -155,7 +160,7 @@ max-width: 230px;
     }
     /*login*/
 
-    /* .image{
+    .image{
         width: 550px;
         
     }
@@ -164,8 +169,7 @@ max-width: 230px;
         display: flex;
         justify-content: center;
     }
-    
-} */
+} 
 
 @media(min-width:992px){
     .img-nosotros {
