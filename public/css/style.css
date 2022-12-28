@@ -1,6 +1,13 @@
+/* HOME */
 .img-main{
     background-image: url("/img/img-first.svg");
-    background-size:cover;
+    height: 1500px;
+    width: auto;
+    
+}
+
+header nav a img{
+    width: 70px;
 }
 
 section div.section-bg-color{
@@ -8,9 +15,79 @@ section div.section-bg-color{
     #28272C 4.79%, #451D66 24.24%, rgba(76,
     0, 199, 0.87) 52.7%, #000000 95.39%);
     width: 100%;
-    height: 300px;
+    height: 800px;
+}
+.card-home:hover{
+    box-shadow: 0px 0px 12px rgb(194, 0, 253)
 }
 
+.titulo{
+    font-size: 30px;
+    line-height: 38px;
+}
+
+.titulo-secundario{
+    font-size: 15px;
+    line-height: 10px;
+}
+
+.titulo-bold{
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.card-title-home{
+    color: white;
+    font-size: 50px;
+    margin-top: 30px;
+}
+
+.title-limpiezas{
+font-size: 60px;
+}
+
+.card-text-home{
+    font-size: 16px;
+    max-width: 80%;
+    margin-left: 50px;
+}
+
+.precio-card-home{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card-home{
+    background-color: rgba(55, 52, 52, 0.55);
+    height: 35vh;
+    border-radius: 30px;
+    padding-bottom: 50px;
+    max-width: 400px;
+}
+
+.linea-sep-card{
+    border: white solid 2px;
+    max-width: 20%;
+
+}
+
+.btn-head{
+    width: 180px;
+    height: 48px;
+    background: linear-gradient(90deg, #1B1B43 2.5%,
+    #5D21C3 51.25%, #3B1D81 100%);
+    border-radius: 30px;
+    border:none;
+    
+}
+
+.light-prog{
+max-width: 230px;
+}
+
+
+
+/* EQUIPOS */
 .cartas{
     background-color: rgba(129, 129, 129, 0.4);
 }
@@ -28,8 +105,75 @@ section div.section-bg-color{
     height: 90px;
 }
 
+
+/* LOGIN */
+/* REGISTER */
+/* CARRITO */
+
+/* MEDIA QUERY */
+
 @media(min-width:768px){
     .style-nav{
         font-size: 13px;
     }
+    .img-nosotros{
+        max-width: 65%;
+    }
+
+    .section-limpiezas{
+        margin-left: 100px;
+        margin-top: 50px;
+        margin-bottom: 150px;
+    }
+
+    .quienes-somos{
+        padding-top: 40px;
+    }
+
+    .card-home{
+        margin-right: 15px;
+        height: 45vh;
+        max-width: 300px;
+    }
+
 }
+
+@media(min-width:992px){
+    .img-nosotros {
+        max-width: 100%;
+    }
+    .quienes-somos{
+        padding-top: 120px;
+    }
+}
+
+
+@media(min-width:1200px){
+    .card-home{
+        height: 50vh;
+        max-width: 450px;
+    }
+    .titulo{
+        font-size: 40px;
+        line-height: 48px;
+    }
+    .titulo-bold{
+        font-size: 70px;
+        line-height: 78px;
+    }
+    .titulo-secundario{
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .section-limpiezas{
+    margin-bottom: 330px;
+    }
+
+    .title-limpiezas{
+        font-size: 100px;
+    }
+    .card-text-home{
+        margin-left: 30px;
+    }
+}
+
