@@ -78,7 +78,7 @@ font-size: 60px;
     #5D21C3 51.25%, #3B1D81 100%);
     border-radius: 30px;
     border:none;
-    
+
 }
 
 .light-prog{
@@ -91,7 +91,7 @@ max-width: 230px;
 
 .section-bg-color-equipos{
     background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 6%, rgba(180,3,49,1) 50%, rgba(45,26,67,1) 100%);
+    background: linear-gradient(169deg, rgba(0,0,0,1) 9%, rgba(180,3,49,1) 49%, rgba(145,72,117,1) 69%, rgba(45,26,67,1) 100%);
 }
 .cartas{
     background-color: rgba(129, 129, 129, 0.4);
@@ -132,6 +132,23 @@ max-width: 230px;
 }
 
 /* CARRITO */
+
+.section-bg-color-carrito{
+    background: rgb(115,0,249);
+    background: linear-gradient(180deg, rgba(115,0,249,1) 20%, rgba(7,133,246,1) 50%, rgba(115,0,249,1) 84%);
+}
+
+.cartas:hover{
+    box-shadow: 0px 0px 40px rgb(194, 0, 253)
+}
+
+.cartas{
+    background-color: rgba(129, 129, 129, 1);
+}
+
+.borrar-producto:hover{
+    color: rgb(248, 65, 65);
+}
 
 /* MEDIA QUERY */
 
@@ -177,6 +194,12 @@ max-width: 230px;
     }
     .quienes-somos{
         padding-top: 120px;
+    }
+
+    /* CARRITO */
+
+.h-custom {
+    height: 100vh !important;
     }
 }
 
