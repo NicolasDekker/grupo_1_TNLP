@@ -17,6 +17,11 @@ section div.section-bg-color{
     width: 100%;
     height: 1280px;
 }
+
+.btn-head:hover{
+    box-shadow: 0px 0px 12px rgb(194, 0, 253)
+}
+
 .card-home:hover{
     box-shadow: 0px 0px 12px rgb(194, 0, 253)
 }
@@ -61,7 +66,7 @@ section div.section-bg-color{
 
 .card-home{
     background-color: rgba(55, 52, 52, 0.55);
-    height: 40vh;
+    height: 36vh;
     border-radius: 30px;
     padding-bottom: 50px;
     max-width: 400px;
@@ -69,15 +74,14 @@ section div.section-bg-color{
 
 .linea-sep-card{
     border: white solid 2px;
-    max-width: 20%;
+    width: 40px;
 }
 
 .linea-sep-card-limpieza{
     border: white solid 3px;
-    max-width: 10%;
-    color: #fff;
+    width: 40px;
     opacity: 1;
-    margin-right: 15px;
+    margin-right: 60px;
 }
 
 
@@ -89,7 +93,6 @@ section div.section-bg-color{
     #5D21C3 51.25%, #3B1D81 100%);
     border-radius: 30px;
     border:none;
-
 }
 
 .light-prog{
@@ -107,8 +110,14 @@ max-width: 230px;
     background: rgb(0,0,0);
     background: linear-gradient(169deg, rgba(0,0,0,1) 9%, rgba(180,3,49,1) 49%, rgba(145,72,117,1) 69%, rgba(45,26,67,1) 100%);
 }
-.cartas{
-    background-color: rgba(129, 129, 129, 0.4);
+
+.card-equipos{
+        background-color: rgba(55, 52, 52, 0.55);
+}
+
+.title-equipos{
+    font-size: 48px;
+    font-family: 'Orbitron', sans-serif;
 }
 
 
@@ -117,7 +126,7 @@ max-width: 230px;
     height: 600px;
 }
 
-.cartas:hover{
+.card-equipos:hover{
     box-shadow: 0px 0px 12px rgb(194, 0, 253)
 }
 
@@ -195,8 +204,7 @@ max-width: 230px;
     }
 
     .linea-sep-card-limpieza{
-        max-width: 7%;
-
+        width: 45px;
     }
 
     .titulo-quienes-somos{
@@ -226,25 +234,26 @@ max-width: 230px;
 } 
 
 @media(min-width:992px){
-    .img-nosotros {
-        max-width: 100%;
-    }
-    .quienes-somos{
+.img-nosotros {
+    max-width: 100%;
+}
+.quienes-somos{
         padding-top: 120px;
     }
 
+.card-home{
+    height: 45vh;
+}
     /* CARRITO */
 
 .h-custom{
     height: 100vh !important;
-    }
+}
 section div.section-bg-color{
     height: 800px;
 }
 
-.card-home{
-    height: 50vh;
-}
+
 
 }
 
