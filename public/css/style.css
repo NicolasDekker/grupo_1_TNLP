@@ -152,16 +152,17 @@ max-width: 230px;
 
 .bg-image-register{
     background-image: url('/img/img-register.jpg');
-    background-position: 60% 50%;
+    background-position: 50% 50%;
 }
 /* CARRITO */
 
 .section-bg-color-carrito{
     background: rgb(115,0,249);
     background: linear-gradient(180deg, rgba(115,0,249,1) 20%, rgba(7,133,246,1) 50%, rgba(115,0,249,1) 84%);
+    
 }
 
-.cartas:hover{
+.card-carrito:hover{
     box-shadow: 0px 0px 40px rgb(194, 0, 253)
 }
 
@@ -308,6 +309,10 @@ section div.section-bg-color{
     .titulo-quienes-somos{
         font-size: 46px;
     }
+
+    /*Login*/
+    .bg-login{
+        height: 500px;}
 
 }
 
