@@ -112,7 +112,7 @@ max-width: 230px;
 }
 
 .card-equipos{
-        background-color: rgba(55, 52, 52, 0.55);
+    background-color: rgba(55, 52, 52, 0.55);
 }
 
 .title-equipos{
@@ -150,10 +150,10 @@ max-width: 230px;
     border-radius: 15px;
 }
 
-.bg-image{
+.bg-image-register{
     background-image: url('/img/img-register.jpg');
+    background-position: 60% 50%;
 }
-
 /* CARRITO */
 
 .section-bg-color-carrito{
@@ -165,12 +165,20 @@ max-width: 230px;
     box-shadow: 0px 0px 40px rgb(194, 0, 253)
 }
 
-.cartas{
-    background-color: rgba(129, 129, 129, 1);
+.card-carrito{
+    background-color: rgba(55, 52, 52, 0.55);
 }
 
 .borrar-producto:hover{
     color: rgb(248, 65, 65);
+}
+
+.carrito-trash{
+    color: #cecece;
+}
+
+.img-productos-carrito{
+    display: none;
 }
 
 /* MEDIA QUERY */
@@ -230,6 +238,12 @@ max-width: 230px;
     .card-login{
         display: flex;
         justify-content: center;
+    }
+
+    /*carrito*/
+
+    .img-productos-carrito{
+        display: flex;
     }
 } 
 
