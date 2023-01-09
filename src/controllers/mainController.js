@@ -1,24 +1,24 @@
-const path = require('path')
+const path = require('path');
 
 const controller = {
     index: (req,res) => {
-        res.sendFile(path.join(__dirname, '../views/home.html'));
+        res.render(path.join(__dirname, "../views/home"));
     },
 
     login: (req,res) => {
-        res.sendFile(path.join(__dirname, '../views/login.html'));
+        res.render(path.join(__dirname, "../views/login"));
     },
 
     equipos: (req,res) => {
-        res.sendFile(path.join(__dirname, '../views/equipos.html'));
+        res.render(path.join(__dirname, "../views/equipos"));
     },
 
     carrito: (req,res) => {
-        res.sendFile(path.join(__dirname, '../views/carrito.html'));
+        res.render(path.join(__dirname, "../views/carrito"));
     },
 
     register: (req,res) => {
-        res.sendFile(path.join(__dirname, '../views/register.html'));
+        res.render(path.join(__dirname, "../views/register"));
     }
 
 }
