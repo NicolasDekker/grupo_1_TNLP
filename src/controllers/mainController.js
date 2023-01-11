@@ -6,19 +6,19 @@ const controller = {
     },
 
     login: (req,res) => {
-        res.render(path.join(__dirname, "../views/login"));
+        res.render("login");
     },
 
     equipos: (req,res) => {
-        res.render(path.join(__dirname, "../views/equipos"));
+        res.render("equipos");
     },
 
     carrito: (req,res) => {
-        res.render(path.join(__dirname, "../views/carrito"));
+        res.render("carrito");
     },
 
     register: (req,res) => {
-        res.render(path.join(__dirname, "../views/register"));
+        res.render("register");
     }
 
 }
