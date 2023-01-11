@@ -13,5 +13,9 @@ router.get('/equipos', mainController.equipos);
 
 router.get('/login', mainController.login);
 
+router.get('/detailProduct', mainController.detailProduct);
+
+
+
 
 module.exports = router;

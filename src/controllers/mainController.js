@@ -19,6 +19,10 @@ const controller = {
 
     register: (req,res) => {
         res.render("register");
+    },
+
+    detailProduct: (req,res) => {
+        res.render("detailProduct");
     }
 
 }
