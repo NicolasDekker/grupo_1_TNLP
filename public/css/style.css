@@ -64,9 +64,9 @@ section div.section-bg-color{
     font-weight: bold;
 }
 
+
 .card-home{
     background-color: rgba(55, 52, 52, 0.55);
-    height: 36vh;
     border-radius: 30px;
     padding-bottom: 50px;
     max-width: 400px;
@@ -183,6 +183,12 @@ max-width: 230px;
 }
 
 /* MEDIA QUERY */
+
+@media(min-width:320px){
+    .card-title-home{
+        font-size: 45px;
+    }
+}
 
 @media(min-width:768px){
     .card-text-home{
