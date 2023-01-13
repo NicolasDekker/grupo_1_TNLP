@@ -157,9 +157,8 @@ max-width: 230px;
 /* CARRITO */
 
 .section-bg-color-carrito{
-    background: rgb(115,0,249);
-    background: linear-gradient(180deg, rgba(115,0,249,1) 20%, rgba(7,133,246,1) 50%, rgba(115,0,249,1) 84%);
-    
+    background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,0.9528186274509804) 0%, rgba(137,1,255,1) 23%, rgba(0,165,250,1) 50%, rgba(180,0,250,1) 77%, rgba(0,0,0,0.9556197478991597) 100%);
 }
 
 .card-carrito:hover{
@@ -171,7 +170,7 @@ max-width: 230px;
 }
 
 .borrar-producto:hover{
-    color: rgb(248, 65, 65);
+    color: rgb(248, 65, 65) !important;
 }
 
 .carrito-trash{
@@ -182,6 +181,11 @@ max-width: 230px;
     display: none;
 }
 
+/* Create Edit */
+.section-bg-color-modificar{
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.9528186274509804) 0%, rgba(76,0,142,1) 16%, rgba(0,250,247,1) 50%, rgba(76,0,142,1) 84%, rgba(0,0,0,0.9640231092436975) 100%);
+    }
 /* MEDIA QUERY */
 
 @media(min-width:320px){

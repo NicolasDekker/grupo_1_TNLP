@@ -9,8 +9,8 @@ const controller = {
         res.render("login");
     },
 
-    equipos: (req,res) => {
-        res.render("equipos");
+    products: (req,res) => {
+        res.render("products");
     },
 
     carrito: (req,res) => {
@@ -23,6 +23,10 @@ const controller = {
 
     detailProduct: (req,res) => {
         res.render("detailProduct");
+    },
+
+    createEdit: (req,res) => {
+        res.render("createEdit")
     }
 
 }

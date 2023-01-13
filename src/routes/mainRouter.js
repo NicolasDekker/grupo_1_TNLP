@@ -9,11 +9,13 @@ router.get('/register', mainController.register);
 
 router.get('/carrito', mainController.carrito);
 
-router.get('/equipos', mainController.equipos);
+router.get('/products', mainController.products);
 
 router.get('/login', mainController.login);
 
 router.get('/detailProduct', mainController.detailProduct);
+
+router.get('/createEdit', mainController.createEdit);
 
 
 
