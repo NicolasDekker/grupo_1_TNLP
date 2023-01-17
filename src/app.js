@@ -22,7 +22,7 @@ app.listen(process.env.PORT || 3000, () => {
 })
 
 app.use('/', mainRouter);
-app.use('/users', userRouter);
+app.use('/user', userRouter);
 
 
 

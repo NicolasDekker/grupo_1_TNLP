@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
 
-    <%- include('partials/head') %> 
+    <%- include('../partials/head') %> 
 
 <body class="bg-black">
     <div class="container">
-        <%- include('partials/header') %>
+        <%- include('../partials/header') %>
     </div>
     <main>
         <section>
@@ -42,8 +42,8 @@
                                                         <div style="width: 50px;">
                                                             <h5 class="fw-normal mb-0">1</h5>
                                                         </div>
-                                                        <a href="/altas"class="carrito-trash pe-2" ><i class="fas fa-plus"></i></a>
-                                                        <a href="/modificaciones"class="carrito-trash pe-2" ><i class="far fa-edit"></i></a>
+                                                        
+                                                        <a href="/user/edit"class="carrito-trash pe-2" ><i class="far fa-edit"></i></a>
                                                         <a href="#!" class="carrito-trash"><i class="borrar-producto fas fa-trash-alt"></i></a>
                                                     </div>
                                                 </div>
@@ -67,8 +67,8 @@
                                                         <div style="width: 50px;">
                                                             <h5 class="fw-normal mb-0">1</h5>
                                                         </div>
-                                                        <a href="/altas" class="carrito-trash pe-2" ><i class="fas fa-plus"></i></a>
-                                                        <a href="/modificaciones"class="carrito-trash pe-2" ><i class="far fa-edit"></i></a>
+                                                       
+                                                        <a href="/user/edit"class="carrito-trash pe-2" ><i class="far fa-edit"></i></a>
                                                         <a href="#!"class="carrito-trash" ><i
                                                             class="borrar-producto fas fa-trash-alt"></i></a>
                                                     </div>
@@ -93,8 +93,8 @@
                                                         <div style="width: 50px;">
                                                             <h5 class="fw-normal mb-0">1</h5>
                                                         </div>
-                                                        <a href="/altas"class="carrito-trash pe-2" ><i class="fas fa-plus"></i></a>
-                                                        <a href="/modificaciones"class="carrito-trash pe-2" ><i class="far fa-edit"></i></a>
+                                                        
+                                                        <a href="/user/edit"class="carrito-trash pe-2" ><i class="far fa-edit"></i></a>
                                                         <a href="#!" class="carrito-trash" ><i class="borrar-producto fas fa-trash-alt"></i></a>
                                                     </div>
                                                 </div>
@@ -102,7 +102,64 @@
                                         </div>
 
                                     </div>
+                                    <div class="col-lg-5 ">
+                                        <div class="card section-bg-color-modificar text-white rounded-3">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                                    <h5 class="mb-0">Crear producto nuevo</h5>
+                                                </div>
+                                                <form class="mt-4">
+                                                    <div class="form-outline form-white mb-4">
+                                                        <input type="text" id="productBrand"
+                                                            class="form-control form-control-lg" siez="17"
+                                                            placeholder="Marca del producto" />
+                                                        <label class="form-label" for="productBrand">Marca</label>
+                                                    </div>
+                                                    <div class="form-outline form-white mb-4">
+                                                        <input type="text" id="productModel"
+                                                            class="form-control form-control-lg" siez="17"
+                                                            placeholder="Modelo del equipo" />
+                                                        <label class="form-label" for="productModel">Modelo</label>
+                                                    </div>
+                                                    <div class="form-outline form-white mb-4">
+                                                        <textarea type="text" id="desciptionText"
+                                                            class="form-control form-control-lg" siez="17"
+                                                            placeholder="Especificaciones" minlength="19"
+                                                            maxlength="19"></textarea>
+                                                        <label class="form-label" for="descriptionText">Descripcion</label>
+                                                    </div>
+                                                    <div class="form-outline form-white mb-4">
+                                                        <input type="file" id="imgProduct"
+                                                            class="form-control " siez="17"/>
+                                                        <label class="form-label" for="imgProduct">Archivos</label>
+                                                    </div>
+                                                    <div class="form-outline form-white mb-4">
+                                                        <select class="form-control form-control-lg" siez="15">
+                                                            <option class="form-control form-control-lg" siez="15">Gamer</option>
+                                                            <option class="form-control form-control-lg" siez="15">Design</option>
+                                                            <option class="form-control form-control-lg" siez="15">Office</option>
+                                                        </select>
+                                                        <label class="form-label" for="category">Seleccione categoria</label>
+                                                    </div>
+                                                    <div class="form-outline form-white mb-4">
+                                                        <input type="number" id="price"
+                                                            class="form-control form-control-lg" siez="17"
+                                                            placeholder="Precio del equipo" />
+                                                        <label class="form-label" for="price">Precio</label>
+                                                    </div>
+                                                </form>
+                                                <div class="d-flex justify-content-center">
+                                                    <button type="button" class="btn-primary btn btn-block btn-lg text-white">
+                                                        <div class="d-flex justify-content-center">
+                                                            <span>Crear</span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                
                             </div>
                                     
                             
@@ -118,7 +175,7 @@
     <!-- Remove the container if you want to extend the Footer to full width. -->
     <div class="container">
         <!-- Footer -->
-        <%- include('partials/footer') %> 
+        <%- include('../partials/footer') %> 
         <!-- Footer -->
     </div>
     <!-- End of .container -->

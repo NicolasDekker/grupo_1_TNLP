@@ -1,18 +1,18 @@
 const controllerMain = {
     index: (req,res) => {
-        res.render("home");
+        res.render("products/home");
     },
 
     products: (req,res) => {
-        res.render("products");
+        res.render("products/products");
     },
 
     carrito: (req,res) => {
-        res.render("carrito");
+        res.render("products/carrito");
     },
 
     detailProduct: (req,res) => {
-        res.render("detailProduct");
+        res.render("products/detailProduct");
     }
 }
 
