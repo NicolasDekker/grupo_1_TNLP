@@ -1,29 +1,15 @@
 const express = require('express');
-const router= express.Router();
+const mainRouter = express.Router();
 
 const mainController = require('../controllers/mainController');
 
-router.get('/', mainController.index);
+mainRouter.get('/', mainController.index);
 
-router.get('/register', mainController.register);
+mainRouter.get('/carrito', mainController.carrito);
 
-router.get('/carrito', mainController.carrito);
+mainRouter.get('/products', mainController.products)
 
-router.get('/products', mainController.products);
-
-router.get('/login', mainController.login);
-
-router.get('/detailProduct', mainController.detailProduct);
-
-router.get('/createEdit', mainController.createEdit);
-
-router.get('/modificaciones', mainController.modificaciones );
-
-router.get('/altas', mainController.altas);
+mainRouter.get('/detailProduct', mainController.detailProduct);
 
 
-
-
-
-
-module.exports = router;
+module.exports = mainRouter;

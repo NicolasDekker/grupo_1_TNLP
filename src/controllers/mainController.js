@@ -1,12 +1,6 @@
-const path = require('path');
-
-const controller = {
+const controllerMain = {
     index: (req,res) => {
         res.render("home");
-    },
-
-    login: (req,res) => {
-        res.render("login");
     },
 
     products: (req,res) => {
@@ -17,25 +11,9 @@ const controller = {
         res.render("carrito");
     },
 
-    register: (req,res) => {
-        res.render("register");
-    },
-
     detailProduct: (req,res) => {
         res.render("detailProduct");
-    },
-
-    createEdit: (req,res) => {
-        res.render("createEdit");
-    },
-    modificaciones: (req,res) =>{
-        res.render("modificaciones");
-    },
-
-    altas: (req,res)=>{
-        res.render('altas');
     }
-
 }
 
-module.exports = controller;
+module.exports = controllerMain;
