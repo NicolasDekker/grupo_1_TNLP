@@ -26,7 +26,14 @@ const controller = {
     },
 
     createEdit: (req,res) => {
-        res.render("createEdit")
+        res.render("createEdit");
+    },
+    modificaciones: (req,res) =>{
+        res.render("modificaciones");
+    },
+
+    altas: (req,res)=>{
+        res.render('altas');
     }
 
 }

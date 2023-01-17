@@ -17,6 +17,12 @@ router.get('/detailProduct', mainController.detailProduct);
 
 router.get('/createEdit', mainController.createEdit);
 
+router.get('/modificaciones', mainController.modificaciones );
+
+router.get('/altas', mainController.altas);
+
+
+
 
 
 
