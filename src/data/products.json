@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "marca": "hp",
+        "modelo": "Victus 16-d0516la",
+        "categoria": "gamer",
+        "precio": 400000,
+        "caracteristicas": "Intel Core I5 8gb Ram 512gb Ssd Win 11",
+        "img": "/img-equipos/hp/victus/1.webp"
+    },
+    {
+        "id": 2,
+        "marca": "hp",
+        "modelo": "Pavilion 15-ec1035la",
+        "categoria": "gamer",
+        "precio": 500000,
+        "caracteristicas": "AMD Ryzen 5 32gb Ram Ssd 500gb Gtx 1050 3gb",
+        "img": "/img-equipos/hp/pavilion/3Y595LA-1_T1643319827.webp"
+    },
+    {
+        "id": 3,
+        "marca": "asus",
+        "modelo": "Rog Strix scar gl503",
+        "categoria": "gamer",
+        "precio": 434500,
+        "caracteristicas": "Ryzen 9 32gb Ram 512gb Ssd Rx 6800m 15,6",
+        "img": "/img-equipos/asus/1.webp"
+    },
+    {
+        "id": 4,
+        "marca": "hp",
+        "modelo": "OMEN 16-b0507la",
+        "categoria": "gamer",
+        "precio": 250000,
+        "caracteristicas": "Core i5 16GB RAM 512GB SSD, RTX 3050",
+        "img": "/img-equipos/hp/1.webp"
+    },
+    {
+        "id": 5,
+        "marca": "msi",
+        "modelo": "Raider GE67 HX - 12U",
+        "categoria": "gamer",
+        "precio": 650000,
+        "caracteristicas": "Core I7 Rtx 3070ti 16gb RAM 1tb Ssd Oled",
+        "img": "/img-equipos/msi/Raider/img-5.png"
+    },
+    {
+        "id": 6,
+        "marca": "msi",
+        "modelo": "Vector GP76 HX - 12U",
+        "categoria": "gamer",
+        "precio": 720000,
+        "caracteristicas": "Core i7 32GB RAM RTX 3070Ti 1tb Ssd 17,30",
+        "img": "/img-equipos/msi/Vector/1.png"
+    }
+]
