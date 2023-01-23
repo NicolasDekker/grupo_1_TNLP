@@ -1,10 +1,16 @@
+const path = require('path')
+const fs = require('fs');
+const productsJSON = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsJSON, 'utf-8'))
+
+
 const controllerMain = {
     index: (req,res) => {
         res.render("products/home");
     },
 
-    products: (req,res) => {
-        res.render("products/products");
+    list: (req, res) => { // Método para renderizar el listado de productos
+        return res.render("products/list", {products: products});
     },
 
     carrito: (req,res) => {

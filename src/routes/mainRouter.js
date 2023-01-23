@@ -7,7 +7,7 @@ mainRouter.get('/', mainController.index);
 
 mainRouter.get('/carrito', mainController.carrito);
 
-mainRouter.get('/products', mainController.products)
+mainRouter.get('/products', mainController.list)
 
 mainRouter.get('/detailProduct', mainController.detailProduct);
 
