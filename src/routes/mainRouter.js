@@ -5,11 +5,5 @@ const mainController = require('../controllers/mainController');
 
 mainRouter.get('/', mainController.index);
 
-mainRouter.get('/carrito', mainController.carrito);
-
-mainRouter.get('/products', mainController.list)
-
-mainRouter.get('/detailProduct', mainController.detailProduct);
-
 
 module.exports = mainRouter;

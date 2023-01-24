@@ -6,7 +6,7 @@ const path= require('path');
 
 const mainRouter = require('./routes/mainRouter');
 const userRouter = require('./routes/userRouter');
-
+const productsRouter = require('./routes/productsRouter');
 
 //Configuration
 app.use(express.static('public'));
@@ -23,6 +23,9 @@ app.listen(process.env.PORT || 3000, () => {
 
 app.use('/', mainRouter);
 app.use('/user', userRouter);
+app.use('/products', productsRouter);
+
+
 
 
 
