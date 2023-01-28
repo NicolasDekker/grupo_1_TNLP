@@ -30,7 +30,7 @@
                     <hr class="linea-sep-card-limpieza"/>
                 </div>
                 <div class="d-flex justify-content-end align-items-center pe-5 pb-4">
-                    <a href="/user/createdEdit" class="btn text-white btn-primary d-flex justify-content-center align-items-center">ABM Productos</a>
+                    <a href="/products/create" class="btn text-white btn-primary d-flex justify-content-center align-items-center">ABM Productos</a>
                 </div>
                 <section id="product-list" class="row justify-content-center">
                     <% for(let i = 0; i < products.length; i++) { %>
@@ -42,7 +42,7 @@
                                 <p class="card-text"> <%= products[i].caracteristicas %></p>
                                 <h1 class="precio-equipos d-flex justify-content-center">$<%= products[i].precio %></h1>
                                 <div class="boton-equipos d-flex justify-content-center">
-                                    <a href="/detailProduct" class="btn text-white btn-head d-flex justify-content-center align-items-center">Añadir al carrito</a>
+                                    <a href="/products/detailProduct" class="btn text-white btn-head d-flex justify-content-center align-items-center">Añadir al carrito</a>
                                 </div>
                             </div>
                         </div>
