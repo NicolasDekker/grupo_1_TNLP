@@ -43,7 +43,9 @@
                                                             <h5 class="fw-normal mb-0">1</h5>
                                                         </div>
                                                         
-                                                        <a href="/products/edit"class="carrito-trash pe-2" ><i class="far fa-edit"></i></a>
+                                                        <form action="/products/edit/<%= products[i].id %>" method="GET">
+                                                            <button type="submit" class="carrito-trash pe-2" ><i class="far fa-edit"></i></button>
+                                                        </form>
                                                         <form action="/products/delete/<%= products[i].id %>?_method=delete" method="POST">
                                                             <button type="submit" class="carrito-trash"><i class="borrar-producto fas fa-trash-alt"></i></button>
                                                         </form>

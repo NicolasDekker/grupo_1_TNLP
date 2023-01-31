@@ -22,53 +22,52 @@
                                             <div class="d-flex justify-content-between align-items-center mb-4">
                                                 <h5 class="mb-0">Elija lo que va a modificar</h5>
                                             </div>
-                                            <form class="mt-4">
+                                            <form action="/list/<%= product.id %>?_method=put" method="POST" class="mt-4">
                                                 <div class="form-outline form-white mb-4">
-                                                    <input type="text" id="productBrand"
+                                                    <input type="text" value="<%= product.marca %>" id="productBrand"
                                                         class="form-control form-control-lg" siez="17"
                                                         placeholder="Marca del producto" />
                                                     <label class="form-label" for="productBrand">Marca</label>
                                                 </div>
                                                 <div class="form-outline form-white mb-4">
-                                                    <input type="text" id="productModel"
+                                                    <input type="text" value="<%= product.modelo %>" id="productModel"
                                                         class="form-control form-control-lg" siez="17"
                                                         placeholder="Modelo del equipo" />
                                                     <label class="form-label" for="productModel">Modelo</label>
                                                 </div>
                                                 <div class="form-outline form-white mb-4">
-                                                    <textarea type="text" id="desciptionText"
+                                                    <textarea type="text"  id="descriptionText"
                                                         class="form-control form-control-lg" siez="17"
-                                                        placeholder="Especificaciones" minlength="19"
-                                                        maxlength="19"></textarea>
+                                                        placeholder="Especificaciones"><%= product.caracteristicas %></textarea>
                                                     <label class="form-label" for="descriptionText">Descripcion</label>
                                                 </div>
                                                 <div class="form-outline form-white mb-4">
-                                                    <input type="file" id="imgProduct"
+                                                    <input type="file" value="<%= product.img %>" id="imgProduct"
                                                         class="form-control " siez="17"/>
                                                     <label class="form-label" for="imgProduct">Archivos</label>
                                                 </div>
                                                 <div class="form-outline form-white mb-4">
                                                     <select class="form-control form-control-lg" siez="15">
-                                                        <option class="form-control form-control-lg" siez="15">Gamer</option>
-                                                        <option class="form-control form-control-lg" siez="15">Design</option>
-                                                        <option class="form-control form-control-lg" siez="15">Office</option>
+                                                        <option <% if (product.categoria == 1) { %> <%= 'selected' %> <% } %> value='1' class="form-control form-control-lg" siez="15">Gamer</option>
+                                                        <option <% if (product.categoria == 2) { %> <%= 'selected' %> <% } %> value='2' class="form-control form-control-lg" siez="15">Design</option>
+                                                        <option <% if (product.categoria == 3) { %> <%= 'selected' %> <% } %> value='3' class="form-control form-control-lg" siez="15">Office</option>
                                                     </select>
                                                     <label class="form-label" for="category">Seleccione categoria</label>
                                                 </div>
                                                 <div class="form-outline form-white mb-4">
-                                                    <input type="number" id="price"
+                                                    <input type="number" value="<%= product.precio %>" id="price"
                                                         class="form-control form-control-lg" siez="17"
                                                         placeholder="Precio del equipo" />
                                                     <label class="form-label" for="price">Precio</label>
                                                 </div>
+                                                <div class="d-flex justify-content-center">
+                                                    <button type="submit" class="btn-primary btn btn-block btn-lg text-white">
+                                                        <div class="d-flex justify-content-center">
+                                                            <span>Modificar</span>
+                                                        </div>
+                                                    </button>
+                                                </div>
                                             </form>
-                                            <div class="d-flex justify-content-center">
-                                                <button type="button" class="btn-primary btn btn-block btn-lg text-white">
-                                                    <div class="d-flex justify-content-center">
-                                                        <span>Modificar</span>
-                                                    </div>
-                                                </button>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
