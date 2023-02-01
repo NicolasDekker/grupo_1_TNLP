@@ -1,32 +1,42 @@
 [
   {
-    "id": 3
-  },
-  {
-    "id": 4,
-    "marca": "HP",
-    "modelo": "OMEN 16-b0507la",
-    "categoria": "gamer",
-    "precio": 250000,
-    "caracteristicas": "Core i5 16GB RAM 512GB SSD, RTX 3050",
-    "img": "HP omen 1.webp"
-  },
-  {
-    "id": 5,
-    "marca": "MSI",
-    "modelo": "Raider GE67 HX - 12U",
-    "categoria": "gamer",
-    "precio": 650000,
-    "caracteristicas": "Core I7 Rtx 3070ti 16gb RAM 1tb Ssd Oled",
+    "id": 1,
     "img": "MSI raider 1.png"
   },
   {
-    "id": 6,
+    "id": 2,
     "marca": "MSI",
     "modelo": "Vector GP76 HX - 12U",
-    "categoria": "gamer",
-    "precio": 720000,
+    "categoria": "1",
     "caracteristicas": "Core i7 32GB RAM RTX 3070Ti 1tb Ssd 17,30",
-    "img": "MSI vector 1.png"
+    "img": "MSI vector 1.png",
+    "precio": "4444"
+  },
+  {
+    "id": 3,
+    "img": "MSI vector 1.png",
+    "marca": "mac",
+    "modelo": "fkd",
+    "categoria": "2",
+    "precio": "755",
+    "caracteristicas": "Fvds"
+  },
+  {
+    "id": 4,
+    "marca": "MSI",
+    "modelo": "Vector GP76 HX - 12U",
+    "categoria": "1",
+    "caracteristicas": "Core i7 32GB RAM RTX 3070Ti 1tb Ssd 17,30",
+    "img": "MSI vector 1.png",
+    "precio": "454"
+  },
+  {
+    "id": 5,
+    "marca": "mac",
+    "modelo": "bsdv",
+    "caracteristicas": "vccv",
+    "categoria": "2",
+    "precio": "254234",
+    "img": "1675217949584.jpg"
   }
 ]

@@ -12,7 +12,7 @@ const controllerProduct = {
     createProcess: (req, res) =>{  // Método para crear un producto
         let id = products[products.length-1].id + 1;
         let productoNuevo = {id, ...req.body}
-        console.log(productoNuevo)
+        productoNuevo.img = req.file.filename
         products.push(productoNuevo);
         fs.writeFileSync(productsJSON, JSON.stringify(products, null, 2))
         return res.redirect('/products')
@@ -24,6 +24,8 @@ const controllerProduct = {
 
     edit: (req,res) =>{
         let product = products.find(row => row.id == req.params.id)
+        console.log(req.body);
+        
         res.render("products/edit", {product: product});
     },
 
@@ -50,7 +52,6 @@ const controllerProduct = {
                 row.categoria = req.body.categoria
                 row.precio = req.body.precio
                 row.caracteristicas = req.body.caracteristicas
-                row.img = req.body.img
             }
         })
         fs.writeFileSync(productsJSON, JSON.stringify(products, null, 2))
