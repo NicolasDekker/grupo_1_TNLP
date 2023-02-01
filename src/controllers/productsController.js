@@ -42,8 +42,8 @@ const controllerProduct = {
     },
 
     update: (req, res) => {
+        console.log(req.body)
         products.forEach(row => {
-            console.log(req.params)
             if (row.id == req.params.id) {
                 row.marca = req.body.marca
                 row.modelo = req.body.modelo
@@ -53,8 +53,8 @@ const controllerProduct = {
                 row.img = req.body.img
             }
         })
-        fs.writeFileSync(products, JSON.stringify(products, null, 2))
-        return res.redirect('products/list')
+        fs.writeFileSync(productsJSON, JSON.stringify(products, null, 2))
+        return res.redirect('/products')
     },
 }
 

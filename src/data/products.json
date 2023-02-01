@@ -1,30 +1,6 @@
 [
   {
-    "id": 1,
-    "marca": "HP",
-    "modelo": "Victus 16-d0516la",
-    "categoria": "gamer",
-    "precio": 400000,
-    "caracteristicas": "Intel Core I5 8gb Ram 512gb Ssd Win 11",
-    "img": "HP victus 1.webp"
-  },
-  {
-    "id": 2,
-    "marca": "HP",
-    "modelo": "Pavilion 15-ec1035la",
-    "categoria": "gamer",
-    "precio": 500000,
-    "caracteristicas": "AMD Ryzen 5 32gb Ram Ssd 500gb Gtx 1050 3gb",
-    "img": "HP pavilion 1.webp"
-  },
-  {
-    "id": 3,
-    "marca": "Asus",
-    "modelo": "Rog Strix scar gl503",
-    "categoria": "gamer",
-    "precio": 434500,
-    "caracteristicas": "Ryzen 9 32gb Ram 512gb Ssd Rx 6800m 15,6",
-    "img": "ASUS rs 1.webp"
+    "id": 3
   },
   {
     "id": 4,
@@ -52,14 +28,5 @@
     "precio": 720000,
     "caracteristicas": "Core i7 32GB RAM RTX 3070Ti 1tb Ssd 17,30",
     "img": "MSI vector 1.png"
-  },
-  {
-    "id": 7,
-    "marca": "Asus",
-    "modelo": "Aspire",
-    "caracteristicas": "i7 8 de ram 15.6",
-    "img": "HP pavilion 1.webp",
-    "categoria": "3",
-    "precio": "44444"
   }
 ]
