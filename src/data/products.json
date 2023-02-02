@@ -1,42 +1,20 @@
 [
   {
     "id": 1,
-    "img": "MSI raider 1.png"
+    "marca": "HP",
+    "modelo": "omen",
+    "precio": "4000",
+    "img": "HP omen 3.webp",
+    "caracteristicas": "I7",
+    "categoria": "1"
   },
   {
     "id": 2,
-    "marca": "MSI",
-    "modelo": "Vector GP76 HX - 12U",
-    "categoria": "1",
-    "caracteristicas": "Core i7 32GB RAM RTX 3070Ti 1tb Ssd 17,30",
-    "img": "MSI vector 1.png",
-    "precio": "4444"
-  },
-  {
-    "id": 3,
-    "img": "MSI vector 1.png",
-    "marca": "mac",
-    "modelo": "fkd",
+    "marca": "Asus",
+    "modelo": "OMEN",
+    "caracteristicas": "i7",
     "categoria": "2",
-    "precio": "755",
-    "caracteristicas": "Fvds"
-  },
-  {
-    "id": 4,
-    "marca": "MSI",
-    "modelo": "Vector GP76 HX - 12U",
-    "categoria": "1",
-    "caracteristicas": "Core i7 32GB RAM RTX 3070Ti 1tb Ssd 17,30",
-    "img": "MSI vector 1.png",
-    "precio": "454"
-  },
-  {
-    "id": 5,
-    "marca": "mac",
-    "modelo": "bsdv",
-    "caracteristicas": "vccv",
-    "categoria": "2",
-    "precio": "254234",
-    "img": "1675217949584.jpg"
+    "precio": "768",
+    "img": "1675360195355.webp"
   }
 ]
