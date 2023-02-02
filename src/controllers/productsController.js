@@ -34,7 +34,12 @@ const controllerProduct = {
     },
 
     detailProduct: (req,res) => {
-        return res.render("products/detailProduct");
+        let product = products.find ( row => row.id == req.params.id )
+        console.log(product);
+        if (product) return res.render("products/detailProduct" , {product:product });
+        //else return res.send('Producto no encontrado');
+
+        //return res.render("products/detailProduct");
     },
 
     delete: (req, res) => {

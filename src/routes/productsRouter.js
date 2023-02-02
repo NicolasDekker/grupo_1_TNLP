@@ -31,7 +31,7 @@ productsRouter.get('/edit/:id', productsController.edit); // Formulario de edici
 
 productsRouter.put('/list/:id', productsController.update)
 
-productsRouter.get('/detailProduct', productsController.detailProduct);
+productsRouter.get('/detailProduct/:id', productsController.detailProduct);
 
 module.exports = productsRouter;
 
