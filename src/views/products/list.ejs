@@ -35,7 +35,7 @@
                 <section id="product-list" class="row justify-content-center">
                     <% for(let i = 0; i < products.length; i++) { %>
                     <article class="card card-equipos col-10 col-md-5 col-lg-3 pt-2 m-md-3 text-white mb-3">
-                        <form action="/products/detailProduct/<%= products[i].id %>"  method="GET" >
+                        <form action="/products/detailProduct/<%= products[i].id %>"  method="GET" enctype="multipart/form-data" >
                             <div>
                                 <h3 class="card-title d-flex justify-content-center "> <%= products[i].marca %> <%= products[i].modelo %></h3>
                                 <img src="/img/img-equipos/<%= products[i].img %>" class="card-img-top" alt="...">
