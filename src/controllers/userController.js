@@ -8,24 +8,26 @@ const controllerUser = {
         res.render("users/login");
     },
 
-    register: (req,res) =>{
-        res.render("users/register")
-    },
-
     registerProcess: (req,res) => {
-        console.log(req.body)
         let id = users[users.length-1].id + 1;
         let usuarioNuevo = {id, ...req.body}
-        console.log(usuarioNuevo)
+        usuarioNuevo.img = req.file.filename
         users.push(usuarioNuevo);
         fs.writeFileSync(usersJSON, JSON.stringify(users, null, 2))
-        return res.redirect('/profile')
+        return res.render('users/profile')
+        
+    },
+
+    register: (req,res) =>{
+        res.render("users/register",  {users: users})
     },
 
     profile: (req,res) => {
-        return res.render('profile')
+        let user = users.find ( row => row.id == req.params.id)
+        if (user) return res.render("users/profile" , {user: user });
     }
 }
+
 
 
 module.exports = controllerUser;

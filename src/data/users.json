@@ -31,29 +31,16 @@
   },
   {
     "id": 5,
-    "usuario": "rocio@hotmail.com",
-    "email": "rocio@hotmail.com",
-    "contraseña": [
-      "12345",
-      "12345"
-    ]
+    "usuario": "Nina",
+    "email": "dekkernicolas@gmail.com",
+    "contraseÃ±a": "5555",
+    "img": "1676741150906.jpeg"
   },
   {
     "id": 6,
-    "usuario": "rocio@hotmail.com",
-    "email": "rocio@hotmail.com",
-    "contraseña": [
-      "12345",
-      "12345"
-    ]
-  },
-  {
-    "id": 7,
-    "usuario": "rocio@hotmail.com",
-    "email": "rocio@hotmail.com",
-    "contraseña": [
-      "1234",
-      "12344"
-    ]
+    "usuario": "Nina",
+    "email": "dekkernicolas@gmail.com",
+    "contraseÃ±a": "6565",
+    "img": "1676741245651.jpeg"
   }
 ]
