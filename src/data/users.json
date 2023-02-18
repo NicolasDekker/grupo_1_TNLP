@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "usuario": "pepe38",
+    "email": "gabriel@gmail.com",
+    "contraseña": "gabi123",
+    "categoria": "usuario"
+  },
+  {
+    "id": 2,
+    "usuario": "pepe38",
+    "email": "nicolas@gmail.com",
+    "contraseña": "nico123",
+    "categoria": "super usuario"
+  },
+  {
+    "id": 3,
+    "usuario": "pepe38",
+    "email": "jeronimo@gmail.com",
+    "contraseña": "jerp123",
+    "categoria": "usuario"
+  },
+  {
+    "id": 4,
+    "usuario": "JEROSº",
+    "email": "jeros_lp@hotmail.com",
+    "contraseña": [
+      "102030",
+      "102030"
+    ]
+  },
+  {
+    "id": 5,
+    "usuario": "rocio@hotmail.com",
+    "email": "rocio@hotmail.com",
+    "contraseña": [
+      "12345",
+      "12345"
+    ]
+  },
+  {
+    "id": 6,
+    "usuario": "rocio@hotmail.com",
+    "email": "rocio@hotmail.com",
+    "contraseña": [
+      "12345",
+      "12345"
+    ]
+  },
+  {
+    "id": 7,
+    "usuario": "rocio@hotmail.com",
+    "email": "rocio@hotmail.com",
+    "contraseña": [
+      "1234",
+      "12344"
+    ]
+  }
+]

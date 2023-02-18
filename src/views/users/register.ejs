@@ -16,38 +16,39 @@
                             <div class="card-register  text-white ">
                                 <div class="card-body p-5">
                                     <h2 class="text-uppercase text-center mb-5">Creá tu cuenta</h2>
-                                    <form>
+                                    <form action="/users/register" method="POST">
                                         <div class="form-outline mb-4">
-                                            <input type="text" id="form3Example1cg"
+                                            <input type="text" name="usuario" id="form3Example1cg"
                                                 class="form-control form-control-lg" />
                                             <label class="form-label" for="form3Example1cg">Usuario</label>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="email" id="form3Example3cg"
+                                            <input type="email" name="email"  id="form3Example3cg"
                                                 class="form-control form-control-lg" />
                                             <label class="form-label" for="form3Example3cg">Email</label>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="password" id="form3Example4cg"
+                                            <input type="password" name="contraseña"  id="form3Example4"
                                                 class="form-control form-control-lg" />
-                                            <label class="form-label" for="form3Example4cg">Contraseña</label>
+                                            <label class="form-label" for="form3Example4">Contraseña</label>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="password" id="form3Example4cdg"
+                                            <input type="password" name="contraseña" id="form3Example4cdg"
                                                 class="form-control form-control-lg" />
-                                            <label class="form-label" for="form3Example4cdg">Repita la Contraseña</label>
+                                            <label class="form-label" for="form3Example4">Repita la Contraseña</label>
                                         </div>
                                         <div class="form-check d-flex justify-content-center mb-5">
-                                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
-                                            <label class="form-check-label" for="form2Example3g">Estoy de acuerdo con todas las declaraciones en <a href="#!" class=""><u>Términos de servicio</u></a>
+                                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                                            <label class="form-check-label" for="form2Example3">Estoy de acuerdo con todas las declaraciones en <a href="#!" class=""><u>Términos de servicio</u></a>
                                             </label>
                                         </div>
                                         <div class="d-flex justify-content-center">
-                                            <button type="button"
-                                                class="btn btn-success btn-block btn-lg btn-head">Registrarse</button>
+                                            <button type="submit" 
+                                                class="btn btn-success btn-block btn-lg btn-head">Registrarse
+                                            </button>
                                         </div>
                                         <p class="text-center text-muted mt-5 mb-0">Ya tenes una cuenta? 
-                                        <a href="/login" class="fw-bold "><u>Acceda aquí</u></a></p>
+                                        <a href="/users/login" class="fw-bold "><u>Acceda aquí</u></a></p>
                                     </form>
                                 </div>
                             </div>

@@ -48,7 +48,6 @@ const controllerProduct = {
     },
 
     update: (req, res) => {
-        console.log(req.body)
         products.forEach(row => {
             if (row.id == req.params.id) {
                 row.marca = req.body.marca
