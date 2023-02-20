@@ -20,10 +20,12 @@ const uploadFile = multer({storage: multerDiskStorage})
 
 userRouter.get('/register', userController.register)
 
-userRouter.post('/register', uploadFile.single("img"), userController.registerProcess);
+userRouter.post('/profile', uploadFile.single("img"), userController.registerProcess);
 
 userRouter.get('/login', userController.login);
 
-userRouter.get('/profile/:id', uploadFile.single("img"), userController.profile)
+userRouter.get('/home', userController.loginProcess )
+
+/* userRouter.get('/profile/:id', uploadFile.single("img"), userController.profile) */
 
 module.exports = userRouter;

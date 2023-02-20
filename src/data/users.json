@@ -3,44 +3,21 @@
     "id": 1,
     "usuario": "pepe38",
     "email": "gabriel@gmail.com",
-    "contraseña": "gabi123",
+    "password": "gabi123",
     "categoria": "usuario"
   },
   {
     "id": 2,
     "usuario": "pepe38",
     "email": "nicolas@gmail.com",
-    "contraseña": "nico123",
+    "password": "nico123",
     "categoria": "super usuario"
   },
   {
     "id": 3,
-    "usuario": "pepe38",
-    "email": "jeronimo@gmail.com",
-    "contraseña": "jerp123",
-    "categoria": "usuario"
-  },
-  {
-    "id": 4,
-    "usuario": "JEROSº",
-    "email": "jeros_lp@hotmail.com",
-    "contraseña": [
-      "102030",
-      "102030"
-    ]
-  },
-  {
-    "id": 5,
-    "usuario": "Nina",
-    "email": "dekkernicolas@gmail.com",
-    "contraseÃ±a": "5555",
-    "img": "1676741150906.jpeg"
-  },
-  {
-    "id": 6,
-    "usuario": "Nina",
-    "email": "dekkernicolas@gmail.com",
-    "contraseÃ±a": "6565",
-    "img": "1676741245651.jpeg"
+    "usuario": "santiaaba@hotmail.com",
+    "email": "",
+    "password": "$2a$10$1wkI.ZIRkf32arodE00Jae7JO9bdNuJrGLxhZQ3sf1wlcPfoDBAvC",
+    "img": "1676898749996.png"
   }
 ]
