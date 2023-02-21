@@ -1,23 +1,14 @@
 [
   {
     "id": 1,
-    "usuario": "pepe38",
-    "email": "gabriel@gmail.com",
-    "password": "gabi123",
-    "categoria": "usuario"
+    "name": "tami",
+    "email": "tami@gmail.com"
   },
   {
     "id": 2,
-    "usuario": "pepe38",
-    "email": "nicolas@gmail.com",
-    "password": "nico123",
-    "categoria": "super usuario"
-  },
-  {
-    "id": 3,
     "usuario": "santiaaba@hotmail.com",
-    "email": "",
-    "password": "$2a$10$1wkI.ZIRkf32arodE00Jae7JO9bdNuJrGLxhZQ3sf1wlcPfoDBAvC",
-    "img": "1676898749996.png"
+    "email": "jeros_lp@hotmail.com",
+    "password": "$2a$10$e3ATCsMtAsLsBoIGTSV5ue9HCki3twofMsVAqU8RPVldzav1.JfCe",
+    "img": "1677006393260.jpeg"
   }
 ]
