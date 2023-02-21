@@ -18,24 +18,50 @@
                                     <h2 class="text-uppercase text-center mb-5">Creá tu cuenta</h2>
                                     <form action="/users/profile" method="POST" enctype="multipart/form-data">
                                         <div class="form-outline mb-4">
-                                            <input type="text" name="usuario" id="form3Example1cg"
-                                                class="form-control form-control-lg" />
+                                            <input 
+                                                type="text" 
+                                                name="usuario" 
+                                                id="form3Example1cg"
+                                                class="form-control form-control-lg  <%= locals.errors && errors.usuario ? 'is-invalid' : null %>" 
+                                                value="<%= locals.oldData ? oldData.usuario : null %>"/>
                                             <label class="form-label" for="form3Example1cg">Usuario</label>
+                                            <% if (locals.errors && errors.usuario) { %>
+                                                <div class="text-danger">
+                                                    <%= errors.usuario.msg  %>
+                                                </div>
+                                            <% } %>
+                                            
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="email" name="email"  id="form3Example3cg"
-                                                class="form-control form-control-lg" />
+                                            <input type="" name="email"  id="form3Example3cg"
+                                                class="form-control form-control-lg <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
+                                                value="<%= locals.oldData ? oldData.email : null %>"/>
                                             <label class="form-label" for="form3Example3cg">Email</label>
+                                            <% if (locals.errors && errors.email) { %>
+                                                <div class="text-danger">
+                                                    <%= errors.email.msg  %>
+                                                </div>
+                                            <% } %>
                                         </div>
                                         <div class="form-outline mb-4">
                                             <input type="password" name="password"  id="form3Example4"
-                                                class="form-control form-control-lg" />
+                                                class="form-control form-control-lg <%= locals.errors && errors.password ? 'is-invalid' : null %>" />
                                             <label class="form-label" for="form3Example4">Contraseña</label>
+                                            <% if (locals.errors && errors.password) { %>
+                                                <div class="text-danger">
+                                                    <%= errors.password.msg  %>
+                                                </div>
+                                            <% } %>
                                         </div>
                                         <div class="form-outline form-white mb-4">
                                             <input name="img" type="file" id="imgProduct" name="img"
                                                 class="form-control "/>
                                             <label class="form-label" for="imgProduct">Seleccionar foto de perfil</label>
+                                            <% if (locals.errors && errors.img) { %>
+                                                <div class="text-danger">
+                                                    <%= errors.img.msg  %>
+                                                </div>
+                                            <% } %>
                                         </div>
                                         <div class="form-check d-flex justify-content-center mb-5">
                                             <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />

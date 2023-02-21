@@ -9,6 +9,8 @@ const mainRouter = require('./routes/mainRouter');
 const userRouter = require('./routes/userRouter');
 const productsRouter = require('./routes/productsRouter');
 
+app.use(express.urlencoded({extended: false}))
+
 //Configuration
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
