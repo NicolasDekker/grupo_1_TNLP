@@ -2,7 +2,7 @@ const path = require('path')
 const fs = require('fs');
 const usersJSON = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersJSON, 'utf-8'))
-const { validationResult } = require('express-validator');
+const { validationResult, body } = require('express-validator');
 const bycriptjs = require('bcryptjs')
 
 const controllerUser = {
@@ -33,7 +33,7 @@ const controllerUser = {
         let allUser = controllerUser.findAll();
         let newUser = {
             id: controllerUser.generateId(),
-            password: bycriptjs.hashSync(req.body.password, 10),
+          
             ...userData
         }
         allUser.push(newUser);
@@ -57,42 +57,81 @@ const controllerUser = {
         return true;
     },
 
-    login: (req,res) => {
-        res.render("users/login");
-    },
-
+    
     registerProcess: (req,res) => {
-
+        
         const resultValidation = validationResult(req);
-
-
-
         if(resultValidation.errors.length > 0){
             return res.render('users/register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
         }
-        return res.render('users/profile')
+        
+        let userInDB = controllerUser.findByField('email', req.body.email)
+        
+        if(userInDB){
+            return res.render('users/register', {
+                errors: {
+                    email:{
+                        msg: "Este email ya esta registrado"
+                    }
+                },
+                oldData: req.body
+            });
+        }
+        
+        let userToCreate = {
+            ...req.body,
+            img: req.file.filename,
+            password: bycriptjs.hashSync(req.body.password, 10)
+        }
+        
+        
+        let userCreate = controllerUser.create(userToCreate)
+        return res.redirect('login')
     },
-
+    
     register: (req,res) =>{
         res.render("users/register")
     },
-
+    
     profile: (req,res) => {
-        let user = users.find ( row => row.id == req.params.id)
-        if (user) return res.render("users/profile/:id");
+        return res.render("users/profile", {
+            user: req.session.userLogged
+        });
     },
 
+    login: (req,res) => {
+        return res.render("users/login");
+    },
+    
     loginProcess: (req,res) => {
         let userToLogin = controllerUser.findByField('email', req.body.email);
 
         if(userToLogin){
-
+            let isOkThePassword = bycriptjs.compareSync(req.body.password, userToLogin.password)
+            if (isOkThePassword){
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                return res.redirect("/users/profile")
         }
-        return res.render(userToLogin);
-        //res.render('./products/home')
+        return res.render('users/login', {
+            errors: {
+                email: {
+                    msg: 'Las credenciales son invalidas'
+                }
+            }
+        });
+    }
+
+        return res.render('users/login', {
+            errors: {
+                email: {
+                    msg: 'El mail es incorrecto'
+                }
+            }
+        });
     }
 }
 

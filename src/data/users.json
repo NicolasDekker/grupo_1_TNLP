@@ -1,14 +1,16 @@
 [
-  {
-    "id": 1,
-    "name": "tami",
-    "email": "tami@gmail.com"
-  },
-  {
-    "id": 2,
-    "usuario": "santiaaba@hotmail.com",
-    "email": "jeros_lp@hotmail.com",
-    "password": "$2a$10$e3ATCsMtAsLsBoIGTSV5ue9HCki3twofMsVAqU8RPVldzav1.JfCe",
-    "img": "1677006393260.jpeg"
-  }
+ {
+  "id": 1,
+  "usuario": "Jero",
+  "email": "jeros_lp@hotmail.com",
+  "password": "$2a$10$nDgq9ko2uONaw.zxsen9KuUE6NwQH.1stSyZLYJAIm9MzR70j/Ngq",
+  "img": "1677023514665.png"
+ },
+ {
+  "id": 2,
+  "usuario": "Jero",
+  "email": "jeroslp@gmail.com",
+  "password": "$2a$10$zBSclZfVcRq9fshTainT/.CBFaZIoUl2SXRRUsPLo1A2xB66KhKbe",
+  "img": "1677080916464.png"
+ }
 ]

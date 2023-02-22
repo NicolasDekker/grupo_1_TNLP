@@ -4,12 +4,19 @@ const express = require('express');
 const app = express();
 const path= require('path');
 const methodOverride = require('method-override')
+const session = require('express-session')
 
 const mainRouter = require('./routes/mainRouter');
 const userRouter = require('./routes/userRouter');
 const productsRouter = require('./routes/productsRouter');
 
 app.use(express.urlencoded({extended: false}))
+
+app.use(session({
+    secret: "Es secreto",
+    resave: false,
+    saveUninitialized: false,
+}))
 
 //Configuration
 app.use(express.static('public'));

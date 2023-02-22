@@ -50,8 +50,8 @@ userRouter.post('/profile', uploadFile.single("img"), validations, userControlle
 
 userRouter.get('/login', userController.login);
 
-userRouter.post('/home', userController.loginProcess )
+userRouter.post('/login', userController.loginProcess);
 
-/* userRouter.get('/profile/:id', uploadFile.single("img"), userController.profile) */
+userRouter.get('/profile', uploadFile.single("img"), userController.profile)
 
 module.exports = userRouter;
