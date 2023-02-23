@@ -8,6 +8,8 @@ const userController = require('../controllers/userController');
 const { body} = require('express-validator');
 
 
+
+
 const multerDiskStorage = multer.diskStorage({
     destination:(req, file, cb) =>{
         cb(null, path.join(__dirname, "../../public/img/img-users"))
@@ -43,15 +45,19 @@ const validations =[
 ]
 
 const uploadFile = multer({storage: multerDiskStorage})
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
-userRouter.get('/register', userController.register)
+userRouter.get('/register', guestMiddleware, userController.register)
 
 userRouter.post('/profile', uploadFile.single("img"), validations, userController.registerProcess);
 
-userRouter.get('/login', userController.login);
+userRouter.get('/login', guestMiddleware, userController.login);
 
 userRouter.post('/login', userController.loginProcess);
 
-userRouter.get('/profile', uploadFile.single("img"), userController.profile)
+userRouter.get('/profile', authMiddleware,  uploadFile.single("img"), userController.profile)
+
+userRouter.get('/logout', userController.logout)
 
 module.exports = userRouter;

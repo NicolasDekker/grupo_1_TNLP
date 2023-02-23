@@ -614,3 +614,7 @@ body{
 .shadow-none {
     box-shadow: none!important;
 }
+
+.btn-profile{
+    background-color:rgb(158, 0, 0);
+}

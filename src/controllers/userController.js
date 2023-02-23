@@ -33,7 +33,7 @@ const controllerUser = {
         let allUser = controllerUser.findAll();
         let newUser = {
             id: controllerUser.generateId(),
-          
+        
             ...userData
         }
         allUser.push(newUser);
@@ -93,35 +93,48 @@ const controllerUser = {
     },
     
     register: (req,res) =>{
+        res.cookie('testing', 'hola mundo', {maxAge: 1000 * 30});
         res.render("users/register")
     },
     
     profile: (req,res) => {
+        console.log(req.cookies.userEmail);
         return res.render("users/profile", {
             user: req.session.userLogged
         });
     },
 
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect('/')
+    },
+
     login: (req,res) => {
+        console.log(req.cookies.testing);
+        console.log(req.cookies);
         return res.render("users/login");
     },
     
     loginProcess: (req,res) => {
         let userToLogin = controllerUser.findByField('email', req.body.email);
-
         if(userToLogin){
             let isOkThePassword = bycriptjs.compareSync(req.body.password, userToLogin.password)
             if (isOkThePassword){
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
+
+                /*if(req.body.remember_user){
+                    res.cookie('userEmail', req.body.email, { maxAge: (2000 * 60) })
+                }*/
+                
                 return res.redirect("/users/profile")
-        }
-        return res.render('users/login', {
-            errors: {
-                email: {
-                    msg: 'Las credenciales son invalidas'
-                }
             }
+            return res.render('users/login', {
+                errors: {
+                    email: {
+                        msg: 'Las credenciales son invalidas'
+                    }
+                }
         });
     }
 

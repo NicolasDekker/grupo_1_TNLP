@@ -12,5 +12,12 @@
   "email": "jeroslp@gmail.com",
   "password": "$2a$10$zBSclZfVcRq9fshTainT/.CBFaZIoUl2SXRRUsPLo1A2xB66KhKbe",
   "img": "1677080916464.png"
+ },
+ {
+  "id": 3,
+  "usuario": "dekkernicolas",
+  "email": "dekkernicolas@gmail.com",
+  "password": "$2a$10$QLJ3OtGkCEQ.d1RZI7HEuOwqywqXlrsACYA1GOR56H0F6Zw2jAGT2",
+  "img": "1677115224272.jpg"
  }
 ]
