@@ -19,5 +19,12 @@
   "email": "dekkernicolas@gmail.com",
   "password": "$2a$10$QLJ3OtGkCEQ.d1RZI7HEuOwqywqXlrsACYA1GOR56H0F6Zw2jAGT2",
   "img": "1677115224272.jpg"
+ },
+ {
+  "id": 4,
+  "usuario": "nico",
+  "email": "nico_@gmail.com",
+  "password": "$2a$10$w2LuQxlmofqnQBvhH4JAdehcjEUWcr6mZVdgDzOICfEuOKafvhYZi",
+  "img": "1677168711922.png"
  }
 ]

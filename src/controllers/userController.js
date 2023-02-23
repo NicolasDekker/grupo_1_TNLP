@@ -2,7 +2,7 @@ const path = require('path')
 const fs = require('fs');
 const usersJSON = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersJSON, 'utf-8'))
-const { validationResult, body } = require('express-validator');
+const { validationResult, body, cookie } = require('express-validator');
 const bycriptjs = require('bcryptjs')
 
 const controllerUser = {
@@ -93,25 +93,22 @@ const controllerUser = {
     },
     
     register: (req,res) =>{
-        res.cookie('testing', 'hola mundo', {maxAge: 1000 * 30});
         res.render("users/register")
     },
     
     profile: (req,res) => {
-        console.log(req.cookies.userEmail);
         return res.render("users/profile", {
             user: req.session.userLogged
         });
     },
 
     logout: (req, res) => {
+        res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/')
     },
 
     login: (req,res) => {
-        console.log(req.cookies.testing);
-        console.log(req.cookies);
         return res.render("users/login");
     },
     
@@ -123,9 +120,9 @@ const controllerUser = {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
 
-                /*if(req.body.remember_user){
-                    res.cookie('userEmail', req.body.email, { maxAge: (2000 * 60) })
-                }*/
+                if(req.body.remember_user){
+                    res.cookie('userEmail', req.body.email, { maxAge: (60000 * 60) })
+                }
                 
                 return res.redirect("/users/profile")
             }

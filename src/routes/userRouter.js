@@ -56,7 +56,7 @@ userRouter.get('/login', guestMiddleware, userController.login);
 
 userRouter.post('/login', userController.loginProcess);
 
-userRouter.get('/profile', authMiddleware,  uploadFile.single("img"), userController.profile)
+userRouter.get('/profile', authMiddleware, uploadFile.single("img"), userController.profile)
 
 userRouter.get('/logout', userController.logout)
 
