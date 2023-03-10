@@ -26,5 +26,12 @@
   "email": "nico_@gmail.com",
   "password": "$2a$10$w2LuQxlmofqnQBvhH4JAdehcjEUWcr6mZVdgDzOICfEuOKafvhYZi",
   "img": "1677168711922.png"
+ },
+ {
+  "id": 5,
+  "usuario": "jorge",
+  "email": "jorgevarios@yahoo.com.ar",
+  "password": "$2a$10$XGECaXMY.RN/f5a9yMfgKuaPLFm4SQlFng9fKQyYmkCQP4D8Ll5l.",
+  "img": "1677204542315.jpg"
  }
 ]
