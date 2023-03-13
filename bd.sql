@@ -1,15 +1,6 @@
-CREATE TABLE equipos (
-	id INT  NOT NULL AUTO_INCREMENT,
-    modelos VARCHAR(255),
-    precio DECIMAL(15),
-    caracteristicas VARCHAR(255),
-    marca_id INT NOT NULL,
-    stock INT(5),
-    PRIMARY KEY (id),
-    FOREIGN KEY (marca_id) REFERENCES marca(id),
-    categoria_id INT NOT NULL,
-	FOREIGN KEY (categoria_id) REFERENCES categoria(id)
-);
+DROP DATABASE IF exists BD_tnlp;
+CREATE DATABASE BD_tnlp;
+USE BD_tnlp;
 
 CREATE TABLE marca (
 	id INT NOT NULL AUTO_INCREMENT,
@@ -23,23 +14,23 @@ CREATE TABLE categoria (
     PRIMARY KEY (id)
 );
 
-
-CREATE TABLE equipos_facturas (
-	equipos_id INT NOT NULL,
-    FOREIGN KEY (equipos_id) REFERENCES equipos(id),
-    facturas_id INT NOT NULL,
-    FOREIGN KEY (facturas_id) REFERENCES facturas(id),
-    cantidad INT NOT NULL,
-    precio_producto DECIMAL(15)
+CREATE TABLE equipos (
+	id INT  NOT NULL AUTO_INCREMENT,
+    modelos VARCHAR(255),
+    precio DECIMAL(15),
+    caracteristicas VARCHAR(255),
+    marca_id INT NOT NULL,
+    stock INT(5),
+    PRIMARY KEY (id),
+    FOREIGN KEY (marca_id) REFERENCES marca(id),
+    categoria_id INT NOT NULL,
+	FOREIGN KEY (categoria_id) REFERENCES categoria(id)
 );
 
-CREATE TABLE facturas (
+CREATE TABLE roles (
 	id INT NOT NULL AUTO_INCREMENT,
-    fecha_venta DATETIME(6),
-    total_factura DECIMAL(15),
-    usuarios_id INT NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY (usuarios_id) REFERENCES usuarios(id)
+    jerarquia VARCHAR(255),
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE usuarios (
@@ -52,12 +43,21 @@ CREATE TABLE usuarios (
     PRIMARY KEY (id),
     FOREIGN KEY (roles_id) REFERENCES roles(id)
 );
-
-CREATE TABLE roles (
+CREATE TABLE facturas (
 	id INT NOT NULL AUTO_INCREMENT,
-    jerarquia VARCHAR(255),
-    PRIMARY KEY (id)
+    fecha_venta DATETIME(6),
+    total_factura DECIMAL(15),
+    usuarios_id INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (usuarios_id) REFERENCES usuarios(id)
 );
 
 
-    
+CREATE TABLE equipos_facturas (
+	equipos_id INT NOT NULL,
+    FOREIGN KEY (equipos_id) REFERENCES equipos(id),
+    facturas_id INT NOT NULL,
+    FOREIGN KEY (facturas_id) REFERENCES facturas(id),
+    cantidad INT NOT NULL,
+    precio_producto DECIMAL(15)
+);
