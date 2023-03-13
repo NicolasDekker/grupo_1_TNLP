@@ -1,21 +1,26 @@
 module.exports = (sequelize, dataTypes) => {
-    const alias = 'Categoria';
+    const alias = 'Usuarios';
 
     const cols = {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false
         },
-        categoria: {
-            type: dataTypes.STRING,
-        }
-
+        usuario: dataTypes.STRING,
+        email: dataTypes.STRING,
+        imagen: dataTypes.STRING,
+        pass: dataTypes.INTEGER,
+        roles_id: dataTypes.INTEGER,
     }
     const config = {
-        tableName: 'categoria',
-        timestamps: false
+        tableName: 'usuarios',
+        timestamps: true,
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
+        deletedAt: false
     }
-    const Categoria = sequelize.define(alias,cols,config)
-    return Categoria
+    const Usuarios = sequelize.define(alias,cols,config)
+    return Usuarios
 }

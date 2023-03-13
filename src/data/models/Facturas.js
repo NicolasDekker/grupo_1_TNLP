@@ -1,21 +1,25 @@
 module.exports = (sequelize, dataTypes) => {
-    const alias = 'Categoria';
+    const alias = 'Facturas';
 
     const cols = {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false
         },
-        categoria: {
-            type: dataTypes.STRING,
-        }
+        usuarios_id: dataTypes.INTEGER,
+        fecha_venta: dataTypes.DATETIME(6),
+        total_factura: dataTypes.DECIMAL(15)
 
     }
     const config = {
-        tableName: 'categoria',
-        timestamps: false
+        tableName: 'facturas',
+        timestamps: true,
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
+        deletedAt: false
     }
-    const Categoria = sequelize.define(alias,cols,config)
-    return Categoria
+    const Facturas = sequelize.define(alias,cols,config)
+    return Facturas
 }
