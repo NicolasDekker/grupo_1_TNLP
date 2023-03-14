@@ -1,37 +1,30 @@
 [
  {
   "id": 1,
-  "usuario": "Jero",
+  "usuario": "Jeros",
   "email": "jeros_lp@hotmail.com",
-  "password": "$2a$10$nDgq9ko2uONaw.zxsen9KuUE6NwQH.1stSyZLYJAIm9MzR70j/Ngq",
-  "img": "1677023514665.png"
+  "password": "$2a$10$LWZvCTZygGwf464FDIVd0.YCibt2ingwvAz0brLEYVXLiEOiAx6CW",
+  "img": "1678799748928.jpg"
  },
  {
   "id": 2,
-  "usuario": "Jero",
-  "email": "jeroslp@gmail.com",
-  "password": "$2a$10$zBSclZfVcRq9fshTainT/.CBFaZIoUl2SXRRUsPLo1A2xB66KhKbe",
-  "img": "1677080916464.png"
+  "usuario": "Jor",
+  "email": "jorgevarios@yahoo.com.ar",
+  "password": "$2a$10$grVXueiWA5c1GLuOtiem.uGFZaDvnBIbXJJW7VCGmOBKiGn6oZmDK",
+  "img": "1678799808486.jpg"
  },
  {
   "id": 3,
-  "usuario": "dekkernicolas",
+  "usuario": "Nico",
   "email": "dekkernicolas@gmail.com",
-  "password": "$2a$10$QLJ3OtGkCEQ.d1RZI7HEuOwqywqXlrsACYA1GOR56H0F6Zw2jAGT2",
-  "img": "1677115224272.jpg"
+  "password": "$2a$10$E69GHLxqag5CxCaIK4or.uxkvSdlIcLhPvla/vSLuHHWXI0vNid0m",
+  "img": "1678799842178.jpg"
  },
  {
   "id": 4,
-  "usuario": "nico",
-  "email": "nico_@gmail.com",
-  "password": "$2a$10$w2LuQxlmofqnQBvhH4JAdehcjEUWcr6mZVdgDzOICfEuOKafvhYZi",
-  "img": "1677168711922.png"
- },
- {
-  "id": 5,
-  "usuario": "jorge",
-  "email": "jorgevarios@yahoo.com.ar",
-  "password": "$2a$10$XGECaXMY.RN/f5a9yMfgKuaPLFm4SQlFng9fKQyYmkCQP4D8Ll5l.",
-  "img": "1677204542315.jpg"
+  "usuario": "user",
+  "email": "user@hotmail.com",
+  "password": "$2a$10$ghpKNLirNsPj8zJg5gEyMucocJw19qefih.UVNZqkBHHHaG645x5a",
+  "img": "1678799875795.jpg"
  }
 ]

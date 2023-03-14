@@ -1,56 +1,38 @@
 [
   {
-    "id": 1,
+    "id": 7,
     "marca": "HP",
-    "modelo": "Victus 16-d0516la",
-    "precio": "279.999",
-    "img": "HP victus 1.webp",
+    "modelo": "HP Victus 16-d0516la",
     "caracteristicas": "Intel Core I5 8gb Ram 512gb Ssd Win 11",
-    "categoria": "3"
+    "categoria": "1",
+    "precio": "280000",
+    "img": "1678797929332.webp"
   },
   {
-    "id": 2,
+    "id": 8,
     "marca": "HP",
-    "modelo": "Pavilion 15-ec1035la",
-    "precio": "199.999",
-    "img": "HP pavilion 1.webp",
+    "modelo": "HP Pavilion 15-ec1035la",
     "caracteristicas": "AMD Ryzen 5 32gb Ram Ssd 500gb Gtx 1050 3gb",
-    "categoria": "3"
+    "categoria": "1",
+    "precio": "199999",
+    "img": "1678798011220.webp"
   },
   {
-    "id": 3,
+    "id": 9,
     "marca": "Asus",
-    "modelo": "Rog Strix scar gl503",
-    "precio": "889.999",
-    "img": "ASUS rs 1.webp",
+    "modelo": "Asus Rog Strix scar gl503",
     "caracteristicas": "Ryzen 9 32gb Ram 512gb Ssd Rx 6800m 15,6",
-    "categoria": "2"
+    "categoria": "1",
+    "precio": "300000",
+    "img": "1678798057956.webp"
   },
   {
-    "id": 4,
+    "id": 10,
     "marca": "MSI",
-    "modelo": "Vector GP76 HX - 12U",
-    "precio": "739.890",
-    "img": "MSI vector 1.png",
+    "modelo": "MSI Vector GP76 HX - 12U",
     "caracteristicas": "Core i7 32GB RAM RTX 3070Ti 1tb Ssd 17,30",
-    "categoria": "1"
-  },
-  {
-    "id": 5,
-    "marca": "HP",
-    "modelo": "OMEN 16-b0507la",
-    "precio": "317.999",
-    "img": "HP omen 1.webp",
-    "caracteristicas": "Core i5 16GB RAM 512GB SSD, RTX 3050",
-    "categoria": "2"
-  },
-  {
-    "id": 6,
-    "marca": "MSI",
-    "modelo": "Raider GE67 HX - 12U",
-    "precio": "1.436.3000",
-    "img": "MSI raider 1.png",
-    "caracteristicas": "Core I7 Rtx 3070ti 16gb RAM 1tb Ssd Oled",
-    "categoria": "1"
+    "categoria": "1",
+    "precio": "350000",
+    "img": "1678798099436.png"
   }
 ]
