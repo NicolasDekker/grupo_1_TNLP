@@ -21,4 +21,16 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Equipos_facturas = sequelize.define(alias,cols,config)
     return Equipos_facturas
+
+    Equipos_facturas.associate = function(modelos){
+        Equipos_facturas.belongToMany(modelos.Equipos, {
+            as: "equipos",
+            foreignKey: 'equipos_id'
+        }),
+
+        Equipos_facturas.belongToMany(modelos.Facturas, {
+            as: "facturas",
+            foreignKey: 'facturas_id'
+        })
+    }
 }
