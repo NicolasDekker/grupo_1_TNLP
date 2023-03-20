@@ -13,7 +13,7 @@ module.exports = (sequelize, dataTypes) => {
         modelo: dataTypes.STRING,
         precio: dataTypes.DECIMAL,
         caracteristicas: dataTypes.STRING,
-        imagen: dataTypes.STRING,
+        imagen: dataTypes.BLOB,
         stock: dataTypes.INTEGER        
     }
     const config = {

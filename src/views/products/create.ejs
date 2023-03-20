@@ -63,10 +63,12 @@
                                                 </div>
                                                 <form action="/products/create" method="POST" enctype="multipart/form-data" class="mt-4">
                                                     <div class="form-outline form-white mb-4">
-                                                        <input type="text" id="productBrand" name="marca"
-                                                            class="form-control form-control-lg" siez="17"
-                                                            placeholder="Marca del producto"/>
-                                                        <label class="form-label" for="productBrand">Marca</label>
+                                                        <select name="marca_id" id="" required>
+                                                            <option value="" disabled selected>- Seleccione la Marca - </option>
+                                                            <% allMarca.forEach(marca => { %>
+                                                            <option value="<%= marca.id %>"><%= marca.nombre %></option>
+                                                            <% }); %>
+                                                        </select>
                                                     </div>
                                                     <div class="form-outline form-white mb-4">
                                                         <input type="text" id="productModel" name="modelo"
@@ -86,10 +88,11 @@
                                                         <label class="form-label" for="imgProduct">Archivos</label>
                                                     </div>
                                                     <div class="form-outline form-white mb-4">
-                                                        <select class="form-control form-control-lg" name="categoria" id="category" siez="15">
-                                                            <option class="form-control form-control-lg" siez="15" value="1">Gamer</option>
-                                                            <option class="form-control form-control-lg" siez="15" value="2">Design</option>
-                                                            <option class="form-control form-control-lg" siez="15" value="3">Office</option>
+                                                        <select name="categoria_id" id="" required>
+                                                            <option value="" disabled selected>- Seleccione la Categoria - </option>
+                                                            <% allCategoria.forEach(categoria => { %>
+                                                            <option value="<%= categoria.id %>"><%= categoria.categoria %></option>
+                                                            <% }); %>
                                                         </select>
                                                         <label class="form-label" for="category">Seleccione categoria</label>
                                                     </div>

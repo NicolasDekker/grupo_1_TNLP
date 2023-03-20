@@ -1,13 +1,40 @@
 const path = require('path')
 const fs = require('fs');
-const productsJSON = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsJSON, 'utf-8'))
+let db = require('../data/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
 
 const controllerProduct = {
 
-    list: (req, res) => { // Método para renderizar el listado de productos
-        return res.render("products/list", {products: products});
+    'list': async (req, res) => {
+        try {
+            const products = await db.Equipos.findAll();
+                res.render('products/list', {products:products})
+        } catch (error){
+            res.send(error)
+        }
     },
+
+    "detailProduct": async function (req, res) {
+        try {
+            const product = await db.Equipos.findByPk(req.params.id);
+            res.render('products/detailProduct.ejs', { product: product });
+        } catch (error) {
+            res.send(error);
+        }
+    },
+
+    create:async (req,res) => {
+        try{
+            const allCategoria = await db.Categoria.findAll();
+            const allMarca = await db.Marca.findAll();
+            const products = await db.Equipos.findAll();
+            res.render("products/create", {allMarca: allMarca, products: products, allCategoria: allCategoria});
+        } catch (error) {
+            res.send(error);
+    }
+},
 
     createProcess: (req, res) =>{  // Método para crear un producto
         let id = products[products.length-1].id + 1;
@@ -16,10 +43,6 @@ const controllerProduct = {
         products.push(productoNuevo);
         fs.writeFileSync(productsJSON, JSON.stringify(products, null, 2))
         return res.redirect('/products')
-    },
-
-    create: (req,res) => {
-        res.render("products/create", {products: products});
     },
 
     edit: (req,res) =>{
@@ -31,11 +54,6 @@ const controllerProduct = {
 
     carrito: (req,res) => {
         return res.render("products/carrito");
-    },
-
-    detailProduct: (req,res) => {
-            let product = products.find ( row => row.id == req.params.id)
-        if (product) return res.render("products/detailProduct" , {product:product });
     },
 
     delete: (req, res) => {

@@ -9,7 +9,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         usuarios_id: dataTypes.INTEGER,
-        fecha_venta: dataTypes.DATETIME(6),
+        fecha_venta: dataTypes.STRING,
         total_factura: dataTypes.DECIMAL(15)
 
     }
