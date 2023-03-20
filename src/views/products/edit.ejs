@@ -24,10 +24,12 @@
                                             </div>
                                             <form action="/products/list/<%= product.id %>?_method=put" method="POST" class="mt-4">
                                                 <div class="form-outline form-white mb-4">
-                                                    <input name="marca" type="text" value="<%= product.marca %>" id="productBrand"
-                                                        class="form-control form-control-lg" siez="17"
-                                                        placeholder="Marca del producto" />
-                                                    <label class="form-label" for="productBrand">Marca</label>
+                                                    <select name="marca_id" id="" required>
+                                                        <option value="" disabled selected>- Seleccione la Marca - </option>
+                                                        <% allMarca.forEach(marca => { %>
+                                                        <option value="<%= marca.id %>"><%= marca.nombre %></option>
+                                                        <% }); %>
+                                                    </select>
                                                 </div>
                                                 <div class="form-outline form-white mb-4">
                                                     <input name="modelo" type="text" value="<%= product.modelo %>" id="productModel"
@@ -42,10 +44,11 @@
                                                     <label class="form-label" for="descriptionText">Descripcion</label>
                                                 </div>
                                                 <div class="form-outline form-white mb-4">
-                                                    <select name="categoria" class="form-control form-control-lg" siez="15">
-                                                        <option <% if (product.categoria == 1) { %> <%= 'selected' %> <% } %> value='1' class="form-control form-control-lg" siez="15">Gamer</option>
-                                                        <option <% if (product.categoria == 2) { %> <%= 'selected' %> <% } %> value='2' class="form-control form-control-lg" siez="15">Design</option>
-                                                        <option <% if (product.categoria == 3) { %> <%= 'selected' %> <% } %> value='3' class="form-control form-control-lg" siez="15">Office</option>
+                                                    <select name="categoria_id" id="" required>
+                                                        <option value="" disabled selected>- Seleccione la Categoria - </option>
+                                                        <% allCategoria.forEach(categoria => { %>
+                                                        <option value="<%= categoria.id %>"><%= categoria.categoria %></option>
+                                                        <% }); %>
                                                     </select>
                                                     <label class="form-label" for="category">Seleccione categoria</label>
                                                 </div>

@@ -4,7 +4,6 @@ let db = require('../data/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
-
 const controllerProduct = {
 
     'list': async (req, res) => {
@@ -35,46 +34,67 @@ const controllerProduct = {
             res.send(error);
     }
 },
+createProcess: async (req, res) =>{
+    try {
+        await db.Equipos.create({
+            modelo: req.body.modelo,
+            precio: req.body.precio,
+            caracteristicas: req.body.caracteristicas,
+            marca_id: req.body.marca_id,
+            categoria_id: req.body.categoria_id,
+            imagen: req.body.imagen,
+        });
+        return res.redirect('create');
+    } catch (error) {
+        res.send(error);
+}},
 
-    createProcess: (req, res) =>{  // Método para crear un producto
-        let id = products[products.length-1].id + 1;
-        let productoNuevo = {id, ...req.body}
-        productoNuevo.img = req.file.filename
-        products.push(productoNuevo);
-        fs.writeFileSync(productsJSON, JSON.stringify(products, null, 2))
-        return res.redirect('/products')
-    },
-
-    edit: (req,res) =>{
-        let product = products.find(row => row.id == req.params.id)
-        console.log(req.body);
-        
-        res.render("products/edit", {product: product});
-    },
+edit: async function (req, res) {
+    try {
+        console.log(req.params)
+        const equipoId = req.params.id;
+        const product = db.Equipos.findByPk(equipoId, { include: ['marca', 'categoria'] });
+        const marcaPromise = db.Marca.findAll();
+        const categoriaPromise = db.Categoria.findAll();
+        const [Equipos, allMarca, allCategoria] = await Promise.all([product, marcaPromise, categoriaPromise]);
+        res.render, ("products/edit",{ Equipos, allMarca: allMarca, allCategoria:allCategoria });
+    } catch (error) {
+        res.send(error);
+    }
+},
 
     carrito: (req,res) => {
         return res.render("products/carrito");
     },
 
-    delete: (req, res) => {
-        let productFiltrados = products.filter(product => product.id != req.params.id)
-        fs.writeFileSync(productsJSON, JSON.stringify(productFiltrados, null, 2))
-        return res.render('products/list', {products: productFiltrados})
+    delete: async function (req, res) {
+        try {
+            const equipoId = req.params.id;
+            await db.Equipos.destroy({ where: { id: equipoId }, force: true });
+            res.redirect('../create');
+        } catch (error) {
+            res.send(error);
+        }
     },
 
-    update: (req, res) => {
-        products.forEach(row => {
-            if (row.id == req.params.id) {
-                row.marca = req.body.marca
-                row.modelo = req.body.modelo
-                row.categoria = req.body.categoria
-                row.precio = req.body.precio
-                row.caracteristicas = req.body.caracteristicas
-            }
-        })
-        fs.writeFileSync(productsJSON, JSON.stringify(products, null, 2))
-        return res.redirect('/products')
-    },
+    update: async function (req, res) {
+        try {
+            const equipoId = req.params.id;
+            await db.Equipos.update({
+                modelo: req.body.modelo,
+                precio: req.body.precio,
+                caracteristicas: req.body.caracteristicas,
+                marca_id: req.body.marca_id,
+                categoria_id: req.body.categoria_id,
+                imagen: req.body.imagen,
+        }, {
+            where: { id: equipoId }
+        });
+            res.redirect('list');
+        } catch (error) {
+            res.send(error);
+        }
+    }
 }
 
 module.exports = controllerProduct;
