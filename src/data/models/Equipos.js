@@ -23,18 +23,18 @@ module.exports = (sequelize, dataTypes) => {
         updatedAt: 'updated_at',
         deletedAt: false
     }
-    const Equipos = sequelize.define(alias,cols,config)
-    return Equipos
-
+    const Equipos = sequelize.define(alias,cols,config);
+    
     Equipos.associate = function(modelos){
-        Equipos.belongTo(modelos.Categoria, {
-            as: "categorias",
+        Equipos.belongsTo(modelos.Categoria, {
+            as: "categoria",
             foreignKey: 'categoria_id'
         }),
-
-        Equipos.belongTo(modelos.Marca, {
+        
+        Equipos.belongsTo(modelos.Marca, {
             as: "marca",
             foreignKey: 'marca_id'
         })
     }
-}
+    return Equipos
+};

@@ -22,12 +22,12 @@ module.exports = (sequelize, dataTypes) => {
         deletedAt: false
     }
     const Usuarios = sequelize.define(alias,cols,config)
-    return Usuarios
-
+    
     Usuarios.associate = function(modelos){
-        Usuarios.belongTo(modelos.Roles, {
+        Usuarios.belongsTo(modelos.Roles, {
             as: "roles",
             foreignKey: 'roles_id'
         })
     }
+    return Usuarios
 }

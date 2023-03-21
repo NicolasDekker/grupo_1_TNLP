@@ -22,17 +22,17 @@
                                             <div class="d-flex justify-content-between align-items-center mb-4">
                                                 <h5 class="mb-0">Elija lo que va a modificar</h5>
                                             </div>
-                                            <form action="/products/list/<%= product.id %>?_method=put" method="POST" class="mt-4">
+                                            <form action="/products/list/<%= Equipos.id %>?_method=PUT" method="POST" class="mt-4">
                                                 <div class="form-outline form-white mb-4">
                                                     <select name="marca_id" id="" required>
                                                         <option value="" disabled selected>- Seleccione la Marca - </option>
                                                         <% allMarca.forEach(marca => { %>
-                                                        <option value="<%= marca.id %>"><%= marca.nombre %></option>
+                                                        <option value="<%= marca.id %>" <% if (Equipos.marca.id == marca.id) { %><%= 'selected' %><% }; %>><%= marca.nombre %></option>
                                                         <% }); %>
                                                     </select>
                                                 </div>
                                                 <div class="form-outline form-white mb-4">
-                                                    <input name="modelo" type="text" value="<%= product.modelo %>" id="productModel"
+                                                    <input name="modelo" type="text" value='<%=Equipos.modelo%>'<%= product.modelo %> id="productModel"
                                                         class="form-control form-control-lg" siez="17"
                                                         placeholder="Modelo del equipo" />
                                                     <label class="form-label" for="productModel">Modelo</label>
@@ -40,20 +40,20 @@
                                                 <div class="form-outline form-white mb-4">
                                                     <textarea name="caracteristicas" type="text"  id="descriptionText"
                                                         class="form-control form-control-lg" siez="17"
-                                                        placeholder="Especificaciones"><%= product.caracteristicas %></textarea>
+                                                        placeholder="Especificaciones" value='<%=Equipos.caracteristicas%>'><%=Equipos.caracteristicas%></textarea>
                                                     <label class="form-label" for="descriptionText">Descripcion</label>
                                                 </div>
                                                 <div class="form-outline form-white mb-4">
                                                     <select name="categoria_id" id="" required>
-                                                        <option value="" disabled selected>- Seleccione la Categoria - </option>
+                                                        <option value="" >- Seleccione la Categoria - </option>
                                                         <% allCategoria.forEach(categoria => { %>
-                                                        <option value="<%= categoria.id %>"><%= categoria.categoria %></option>
+                                                        <option value='<%= categoria.id %>' <% if (Equipos.categoria.id == categoria.id) { %><%= 'selected' %><% }; %>><%= categoria.categoria %></option>
                                                         <% }); %>
                                                     </select>
                                                     <label class="form-label" for="category">Seleccione categoria</label>
                                                 </div>
                                                 <div class="form-outline form-white mb-4">
-                                                    <input name="precio" type="number" value="<%= product.precio %>" id="price"
+                                                    <input name="precio" type="number" value="<%=Equipos.precio %>" id="price"
                                                         class="form-control form-control-lg" siez="17"
                                                         placeholder="Precio del equipo" />
                                                     <label class="form-label" for="price">Precio</label>

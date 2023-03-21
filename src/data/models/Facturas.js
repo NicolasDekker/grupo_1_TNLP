@@ -21,12 +21,12 @@ module.exports = (sequelize, dataTypes) => {
         deletedAt: false
     }
     const Facturas = sequelize.define(alias,cols,config)
-    return Facturas
-
+    
     Facturas.associate = function(modelos){
-        Facturas.belongTo(modelos.Usuarios, {
+        Facturas.belongsTo(modelos.Usuarios, {
             as: "usuarios",
             foreignKey: 'usuarios_id'
         })
     }
+    return Facturas
 }
