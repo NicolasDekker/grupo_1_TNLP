@@ -51,14 +51,14 @@ createProcess: async (req, res) =>{
 
 edit: async function (req, res) {
     try {
-        console.log(req.params)
         const equipoId = req.params.id;
-        const product = db.Equipos.findByPk(equipoId, { include: ['marca', 'categoria'] });
+        const product = db.Equipos.findByPk(equipoId,  { include: ['marca', 'categoria'] });
         const marcaPromise = db.Marca.findAll();
         const categoriaPromise = db.Categoria.findAll();
         const [Equipos, allMarca, allCategoria] = await Promise.all([product, marcaPromise, categoriaPromise]);
-        res.render, ("products/edit",{ Equipos, allMarca: allMarca, allCategoria:allCategoria });
+        res.render("products/edit",{ Equipos, allMarca: allMarca, allCategoria:allCategoria });
     } catch (error) {
+        console.log(error)
         res.send(error);
     }
 },
