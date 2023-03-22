@@ -17,8 +17,11 @@ const controllerProduct = {
 
     "detailProduct": async function (req, res) {
         try {
+
             const product = await db.Equipos.findByPk(req.params.id);
+            console.log(product)
             res.render('products/detailProduct.ejs', { product: product });
+
         } catch (error) {
             res.send(error);
         }

@@ -16,15 +16,15 @@
                         <div class="container-fliud">
                             <div class="wrapper row">
                                 <div class="preview col-md-6">
-
+                                    <div id="idProd"><%= product.id%></div>
                                     <div class="preview-pic tab-content">
-                                        <div class="tab-pane active" id="pic-1"><img
-                                                src="/img/img-equipos/<%= product.img %>" /></div>
+                                        <div class="tab-pane active" id="pic-1"><img id="img" alt="<%= product.imagen %>"
+                                                src="/img/img-equipos/<%= product.imagen %>" /></div>
                                         
                                     </div>                                    
                                 </div>
                                 <div class="details col-md-6 mt-5">
-                                    <h3 class="product-title">  <%= product.marca %> <%= product.modelo %>  </h3>
+                                    <h3 class="product-title" id="nombre"><%= product.marca %> <%= product.modelo %></h3>
                                     <div class="rating">
                                         <div class="stars">
                                             <span class="fa fa-star checked"></span>
@@ -35,10 +35,10 @@
                                         </div>
                                         
                                     </div>
-                                    <p class="product-description"> <%= product.caracteristicas %></p>
-                                    <h4 class="">Precio: $<span> <%= product.precio %></span></h4>
+                                    <p class="product-description" id="caracteristicas"> <%= product.caracteristicas %></p>
+                                    <h4 class="" id="precio">Precio: $<span> <%= product.precio %></span></h4>
                                     <div class="action mt-5 pt-5">
-                                        <button class="btn btn-default btn-head text-white" type="button">Añadir al carrito</button>
+                                        <button class="btn btn-default btn-head text-white" id="car" type="button">Añadir al carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -63,6 +63,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
     integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/js/agregarAlCarrito.js"></script>
 </body>
 
 </html>
