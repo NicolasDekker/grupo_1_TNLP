@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
         usuario: dataTypes.STRING,
         email: dataTypes.STRING,
         imagen: dataTypes.STRING,
-        pass: dataTypes.INTEGER,
+        pass: dataTypes.STRING,
         roles_id: dataTypes.INTEGER,
     }
     const config = {
