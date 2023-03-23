@@ -109,7 +109,7 @@ const controllerUser = {
             if (userToLogin) {
                 console.log(req.body.password);
                 console.log(userToLogin.pass);
-            const isOkThePassword = bycriptjs.compareSync(req.body.password, userToLogin.password);
+            const isOkThePassword = bycriptjs.compareSync(req.body.password, userToLogin.pass);
             if (isOkThePassword) {
                 delete userToLogin.pass;
                 req.session.userLogged = userToLogin;
@@ -143,39 +143,7 @@ const controllerUser = {
     
     
     
-    /* loginProcess: (req,res) => {
-        let userToLogin = controllerUser.findOne({ where: { email: req.body.email } });
-        if(userToLogin){
-            let isOkThePassword = bycriptjs.compareSync(req.body.password, userToLogin.password)
-            if (isOkThePassword){
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-
-                if(req.body.remember_user){
-                    res.cookie('userEmail', req.body.email, { maxAge: (60000 * 60) })
-                }
-                
-                return res.redirect("/users/profile")
-            }
-            return res.render('users/login', {
-                errors: {
-                    email: {
-                        msg: 'Las credenciales son invalidas'
-                    }
-                }
-        });
-    }
-
-        return res.render('users/login', {
-            errors: {
-                email: {
-                    msg: 'El mail es incorrecto'
-                }
-            }
-        });
-    }
-}
- */
+    
 }
 
 module.exports = controllerUser;

@@ -23,7 +23,7 @@ INSERT INTO roles (id,jerarquia)
 VALUES  (1,'usuario'),
 		(2,'super usuario');
         
-INSERT INTO usuarios (id,usuario,imagen,email,pass,imagen,roles_id)
+INSERT INTO usuarios (id,usuario,email,pass,imagen,roles_id)
 VALUES  (1,"Jeros",'jeros_lp@hotmail.com','1234','1678799748928.jpg',2),
 		(2,"Jor",'jorgevarios@yahoo.com.ar','1234','1678799808486.jpg',2),
 		(3,"Nico",'dekkernicolas@gmail.com','1234','1678799842178.jpg',2),
