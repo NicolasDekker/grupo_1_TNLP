@@ -21,7 +21,7 @@ function agregarProducto (){
         img: document.getElementById('img').alt,
         nombre: document.getElementById('nombre').innerText,
         caracteristicas: document.getElementById('caracteristicas').innerText,
-        precio: document.getElementById('precio').innerText.replace('$', '')
+        precio: parseFloat(document.getElementById('precio').innerText.replace('Precio: $', ''))
     }
     let carrito = JSON.parse(localStorage.getItem('productos'))
     if(carrito.length == 0){
