@@ -12,7 +12,7 @@ VALUES (1,'HP'),
 		(6,'MSI');
 
 
-INSERT INTO equipos (id,marca_id,modelos,precio,caracteristicas,categoria_id,stock,imagen)
+INSERT INTO equipos (id,marca_id,modelo,precio,caracteristicas,categoria_id,stock,imagen)
 VALUES (1,1,'Victus 16-d0516la',280000,"Intel Core I5 8gb Ram 512gb Ssd Win 11",2,5,"1678797929332.webp"),
         (2,1,'Pavilion 15-ec1035la',199999,"AMD Ryzen 5 32gb Ram Ssd 500gb Gtx 1050 3gb",2,5,"1678798011220.webp"),
         (3,2,'Rog Strix scar gl503',889999,"Ryzen 9 32gb Ram 512gb Ssd Rx 6800m 15,6",2,4,"1678798057956.webp"),

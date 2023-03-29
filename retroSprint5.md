@@ -48,3 +48,25 @@ tratar de empezar a resolver los problemas solos
 
 decir hacer algo y no hacerlo
 
+Jorge
+
+- Seleccionar el punto a mejorar:
+
+Creo que no hay Puntos a mejorar.
+
+- Continuar haciendo:
+
+Trabajar en conjunto.
+
+- Comenzar a hacer:
+
+Seguiria como venimos, venimos muy bien.
+
+- Hacer más:
+
+Resolver problemas de manera individual sin pedir ayuda.
+
+- Dejar de Hacer:
+
+Muchas consultas.
+

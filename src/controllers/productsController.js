@@ -45,7 +45,7 @@ createProcess: async (req, res) =>{
             caracteristicas: req.body.caracteristicas,
             marca_id: req.body.marca_id,
             categoria_id: req.body.categoria_id,
-            imagen: req.body.imagen,
+            imagen: req.file.filename,
         });
         return res.redirect('create');
     } catch (error) {
@@ -89,7 +89,7 @@ edit: async function (req, res) {
                 caracteristicas: req.body.caracteristicas,
                 marca_id: req.body.marca_id,
                 categoria_id: req.body.categoria_id,
-                imagen: req.body.imagen,
+                imagen: req.file.imagen,
         }, {
             where: { id: equipoId }
         });

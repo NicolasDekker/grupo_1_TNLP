@@ -3,8 +3,6 @@ const fs = require('fs');
 let db = require('../data/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
-const usersJSON = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersJSON, 'utf-8'))
 const { validationResult, body, cookie } = require('express-validator');
 const bycriptjs = require('bcrypt')
 
@@ -41,7 +39,7 @@ const controllerUser = {
         return userFound;
     }, */
 
-    create: (userData) => {
+    /* create: (userData) => {
         let allUser = controllerUser.findAll();
         let newUser = {
             id: controllerUser.generateId(),
@@ -52,7 +50,7 @@ const controllerUser = {
         fs.writeFileSync(controllerUser.fileName, JSON.stringify(allUser, null, ' '));
         return newUser
     },
-
+ */
     generateId: () => {
         let allUser = controllerUser.findAll();
         let lastUser = allUser.pop();
@@ -62,19 +60,19 @@ const controllerUser = {
         return 1;
     },
 
-    delete: (id) => {
+    /* delete: (id) => {
         let allUser = controllerUser.findAll();
         let finalUsers = allUser.filter(oneUser => oneUser.id !== id);
         fs.writeFileSync(controllerUser.fileName, JSON.stringify(finalUsers, null, ' '));
         return true;
-    },
+    }, */
 
     registerProcess: async (req, res) =>{
         try {
             await db.Usuarios.create({
                 usuario: req.body.usuario,
                 email: req.body.email,
-                imagen: req.file.imagen,
+                imagen: req.file.filename,
                 roles_id: 1,
                 pass: bycriptjs.hashSync(req.body.password,10),
             });
