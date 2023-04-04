@@ -1,6 +1,10 @@
 
 const user = require('../controllers/userController')
 const db = require('../data/models');
+const { body, validationResult} = require('express-validator');
+
+
+
 function userLoggedMiddleware (req, res, next){
     res.locals.isLogged = false;
 

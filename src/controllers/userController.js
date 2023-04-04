@@ -24,33 +24,6 @@ const controllerUser = {
         return userFound;
     },
 
-    /* findOne: async function (usuarioId) {
-        try {
-            const userFound = await db.Usuarios.findOne({ where: { id: usuarioId } });
-            return userFound;
-        } catch (error) {
-            console.error(error);
-        }
-    }, */
-
-    /* findByField: (field, text) => {
-        let allUser = controllerUser.findAll();
-        let userFound = allUser.find(oneUser => oneUser[field] === text)
-        return userFound;
-    }, */
-
-    /* create: (userData) => {
-        let allUser = controllerUser.findAll();
-        let newUser = {
-            id: controllerUser.generateId(),
-        
-            ...userData
-        }
-        allUser.push(newUser);
-        fs.writeFileSync(controllerUser.fileName, JSON.stringify(allUser, null, ' '));
-        return newUser
-    },
- */
     generateId: () => {
         let allUser = controllerUser.findAll();
         let lastUser = allUser.pop();
@@ -59,14 +32,7 @@ const controllerUser = {
         }
         return 1;
     },
-
-    /* delete: (id) => {
-        let allUser = controllerUser.findAll();
-        let finalUsers = allUser.filter(oneUser => oneUser.id !== id);
-        fs.writeFileSync(controllerUser.fileName, JSON.stringify(finalUsers, null, ' '));
-        return true;
-    }, */
-
+    
     registerProcess: async (req, res) =>{
         try {
             await db.Usuarios.create({
