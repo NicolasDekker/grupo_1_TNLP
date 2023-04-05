@@ -35,6 +35,12 @@ const controllerUser = {
     
     registerProcess: async (req, res) =>{
         try {
+                const errors = validationResult(req);
+                if (!errors.isEmpty()) {
+                    console.log(errors);
+                    return res.render("users/register", {errors : errors.mapped()})
+                    
+                }
             await db.Usuarios.create({
                 usuario: req.body.usuario,
                 email: req.body.email,
@@ -42,9 +48,11 @@ const controllerUser = {
                 roles_id: 1,
                 pass: bycriptjs.hashSync(req.body.password,10),
             });
+            
             return res.redirect('login');
         } catch (error) {
-            res.send(error);
+            res.render("users/register", {error})
+            
     }},
     
     register: (req,res) =>{

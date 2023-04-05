@@ -3,6 +3,7 @@ const fs = require('fs');
 let db = require('../data/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const { validationResult} = require('express-validator');
 
 const controllerProduct = {
 
@@ -39,6 +40,16 @@ const controllerProduct = {
 },
 createProcess: async (req, res) =>{
     try {
+        const allCategoria = await db.Categoria.findAll();
+        const allMarca = await db.Marca.findAll();
+        const products = await db.Equipos.findAll();
+
+        const errors = validationResult(req);
+                if (!errors.isEmpty()) {
+                    console.log(errors);
+                    return res.render("products/create", {errors : errors.mapped(), allMarca: allMarca, products: products, allCategoria: allCategoria})
+                    
+                }
         await db.Equipos.create({
             modelo: req.body.modelo,
             precio: req.body.precio,
@@ -49,7 +60,8 @@ createProcess: async (req, res) =>{
         });
         return res.redirect('create');
     } catch (error) {
-        res.send(error);
+        console.log(error);
+        res.send(error)
 }},
 
 edit: async function (req, res) {

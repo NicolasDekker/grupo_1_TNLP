@@ -2,10 +2,10 @@ const express = require('express');
 const userRouter = express.Router();
 const multer = require('multer');
 const path = require('path');
+const { body, validationResult} = require('express-validator');
+let db = require('../data/models');
 
 const userController = require('../controllers/userController');
-
-const { body} = require('express-validator');
 
 
 
@@ -22,25 +22,30 @@ const multerDiskStorage = multer.diskStorage({
 
 const validations =[
 
-    body('usuario').notEmpty().withMessage('Tienes que escribir un usuario'),
+    body('usuario').notEmpty().withMessage('Tienes que escribir un usuario').isLength({ min: 2 }).withMessage('El campo debe tener al menos 2 caracteres'),
     body('email')
         .notEmpty().withMessage('Tienes que escribir un correo electronico').bail()
         .isEmail().withMessage('Debes escribir un formato de correo valido'),
-    body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+    body('email').custom(async (value, { req }) => {
+        const existingUser = await db.Usuarios.findOne({where:{ email: req.body.email }});
+        console.log(existingUser);
+        if (existingUser) {
+            throw new Error('El correo electrónico ya está en uso');
+        }
+    }),
+    body('password').notEmpty().withMessage('Tienes que escribir una contraseña').isLength({ min: 8 }).withMessage('El campo debe tener al menos 8 caracteres'),
     body('img').custom((value, { req }) => {
         let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png'];
+        let acceptedExtensions = ['.jpg', '.png', '.pneg', '.gif'];
         
         if(!file){
             throw new Error('tienes que subir una imagen');
         }else {
             let fileExtension = path.extname(file.originalname);
             if (!acceptedExtensions.includes(fileExtension)){
-            throw new Error('Las extensiones permitidas son .jpg y .png');
+            throw new Error('Las extensiones permitidas son .jpg, .pneg, .gif y .png ');
             }
         }
-
-        
         return true;
     })
 ]
@@ -51,7 +56,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 
 userRouter.get('/register', guestMiddleware, userController.register)
 
-userRouter.post('/profile', uploadFile.single("img"), validations, userController.registerProcess);
+userRouter.post('/register', uploadFile.single("img"), validations, userController.registerProcess);
 
 userRouter.get('/login', guestMiddleware, userController.login);
 
