@@ -2,28 +2,17 @@ window.onload = function () {
     let form = document.querySelector('.form')
 
 
-    form.usuario.focus();
+    form.email.focus();
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault()
 
         let error = []
 
-        let usuario = document.querySelector('#usuario')
         let email = document.querySelector('#email')
         let password = document.querySelector('#password')
-        let img = document.querySelector('#imgProduct')
-
-        if (usuario.value == '') {
-            error.push('El usuario no puede estar vacio')
-            usuario.classList.add('is-invalid')
-        } else if (usuario.value.length < 2) {
-            error.push('debe contener al menos 2 caracteres')
-            usuario.classList.add('is-invalid')
-        } else {
-            usuario.classList.remove('is-invalid')
-            usuario.classList.add('is-valid')
-        }
+        let errores = document.querySelector('.error')
+        errores.style.color = "white";
 
         if (email.value == '') {
             error.push('El email no puede estar vacio')
@@ -37,33 +26,12 @@ window.onload = function () {
             error.push('Debe escribir su contraseña')
             password.classList.add('is-invalid')
         } else if (password.value.length < 8) {
-            error.push('debe contener al menos 8 caracteres')
+            error.push('Debe contener al menos 8 caracteres')
             password.classList.add('is-invalid')
         }else {
             password.classList.remove('is-invalid')
             password.classList.add('is-valid')
         }
-
-        function validateImageExtension(img) {
-            const extension = (img.split('.').pop());
-            console.log(extension)
-            const extensiones = ["jpg", 'png', 'jpeg', 'gif'];
-            if(extensiones.includes(extension) && img != ''){
-                return true
-            }else{
-                return false
-            }
-        }
-
-        const isValidExtension = validateImageExtension(img.value);
-        console.log(isValidExtension)
-        console.log(img.value)
-        if (!isValidExtension) {
-
-            error.push('La imagen debe ser de tipo JPG, JPEG, PNG, GIF')
-            img.classList.add('is-invalid')
-        } 
-
 
         let ulError = document.querySelector(".error")
         ulError.innerHTML = ``
