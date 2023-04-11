@@ -16,15 +16,16 @@
                             <div class="card-register  text-white ">
                                 <div class="card-body p-5">
                                     <h2 class="text-uppercase text-center mb-5">Creá tu cuenta</h2>
-                                    <form action="/users/register" method="POST" enctype="multipart/form-data">
+                                    <ul class="error"></ul>
+                                    <form action="/users/register" class="form" method="POST" enctype="multipart/form-data">
                                         <div class="form-outline mb-4">
                                             <input 
                                                 type="text" 
                                                 name="usuario" 
-                                                id="form3Example1cg"
+                                                id="usuario"
                                                 class="form-control form-control-lg  <%= locals.errors && errors.usuario ? 'is-invalid' : null %>" 
                                                 value="<%= locals.oldData ? oldData.usuario : null %>"/>
-                                            <label class="form-label" for="form3Example1cg">Usuario</label>
+                                            <label class="form-label" for="usuario">Usuario</label>
                                             <% if (locals.errors && errors.usuario) { %>
                                                 <div class="text-danger">
                                                     <%= errors.usuario.msg  %>
@@ -33,10 +34,13 @@
                                             
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="" name="email"  id="form3Example3cg"
+                                            <input 
+                                                type="" 
+                                                name="email"  
+                                                id="email"
                                                 class="form-control form-control-lg <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
                                                 value="<%= locals.oldData ? oldData.email : null %>"/>
-                                            <label class="form-label" for="form3Example3cg">Email</label>
+                                            <label class="form-label" for="email">Email</label>
                                             <% if (locals.errors && errors.email) { %>
                                                 <div class="text-danger">
                                                     <%= errors.email.msg  %>
@@ -44,9 +48,12 @@
                                             <% } %>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="password" name="password"  id="form3Example4"
+                                            <input 
+                                                type="password" 
+                                                name="password"  
+                                                id="password"
                                                 class="form-control form-control-lg <%= locals.errors && errors.password ? 'is-invalid' : null %>" />
-                                            <label class="form-label" for="form3Example4">Contraseña</label>
+                                            <label class="form-label" for="password">Contraseña</label>
                                             <% if (locals.errors && errors.password) { %>
                                                 <div class="text-danger">
                                                     <%= errors.password.msg  %>
@@ -54,7 +61,10 @@
                                             <% } %>
                                         </div>
                                         <div class="form-outline form-white mb-4">
-                                            <input name="img" type="file" id="imgProduct" name="img"
+                                            <input 
+                                                name="img" 
+                                                type="file" 
+                                                id="imgProduct"
                                                 class="form-control "/>
                                             <label class="form-label" for="imgProduct">Seleccionar foto de perfil</label>
                                             <% if (locals.errors && errors.img) { %>
@@ -97,6 +107,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
         integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/userAddValidation.js"></script>       
 </body>
 
 </html>
