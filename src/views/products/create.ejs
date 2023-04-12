@@ -67,8 +67,8 @@
                                                         <select 
                                                             name="marca_id" 
                                                             id="marca" 
-                                                            required>
-                                                            <option value=0 disabled selected>- Seleccione la Marca - </option>
+                                                            >
+                                                            <option value="" disabled selected>- Seleccione la Marca - </option>
                                                             <% allMarca.forEach(marca => { %>
                                                             <option value="<%= marca.id %>"><%= marca.nombre %></option>
                                                             <% }); %>
@@ -128,7 +128,7 @@
                                                         <select 
                                                             name="categoria_id" 
                                                             id="categoria" 
-                                                            required>
+                                                            >
                                                             <option value="" disabled selected>- Seleccione la Categoria - </option>
                                                             <% allCategoria.forEach(categoria => { %>
                                                             <option value=0 <%= categoria.id %>><%= categoria.categoria %></option>

@@ -24,22 +24,16 @@ window.onload = function () {
             marca_id.classList.add('is-valid')
         }
         
-        if (modelo.value == '') {
-            error.push('El modelo no puede estar vacio')
-            modelo.classList.add('is-invalid')
-        } else if (modelo.value.length < 5) {
-            error.push('Debe contener al menos 5 caracteres')
+        if (modelo.value.length < 5) {
+            error.push('El modelo debe contener al menos 5 caracteres')
             modelo.classList.add('is-invalid')
         } else {
             modelo.classList.remove('is-invalid')
             modelo.classList.add('is-valid')
         }
 
-        if (caracteristicas.value == '') {
-            error.push('Las caracteristicas no pueden estar vacias')
-            caracteristicas.classList.add('is-invalid')
-        } else if (caracteristicas.value.length < 20) {
-            error.push('Debe contener al menos 20 caracteres')
+        if (caracteristicas.value.length < 20) {
+            error.push('Las caracteristicas debe contener al menos 20 caracteres')
             caracteristicas.classList.add('is-invalid')
         }else {
             caracteristicas.classList.remove('is-invalid')
