@@ -14,11 +14,8 @@ window.onload = function () {
         let password = document.querySelector('#password')
         let img = document.querySelector('#imgProduct')
 
-        if (usuario.value == '') {
-            error.push('El usuario no puede estar vacio')
-            usuario.classList.add('is-invalid')
-        } else if (usuario.value.length < 2) {
-            error.push('debe contener al menos 2 caracteres')
+        if (usuario.value.length < 2) {
+            error.push('El usuario debe contener al menos 2 caracteres')
             usuario.classList.add('is-invalid')
         } else {
             usuario.classList.remove('is-invalid')
@@ -33,11 +30,8 @@ window.onload = function () {
             email.classList.add('is-valid')
         }
 
-        if (password.value == '') {
-            error.push('Debe escribir su contraseña')
-            password.classList.add('is-invalid')
-        } else if (password.value.length < 8) {
-            error.push('debe contener al menos 8 caracteres')
+        if (password.value.length < 8) {
+            error.push('La contraseña debe contener al menos 8 caracteres')
             password.classList.add('is-invalid')
         }else {
             password.classList.remove('is-invalid')

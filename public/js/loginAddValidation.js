@@ -22,11 +22,8 @@ window.onload = function () {
             email.classList.add('is-valid')
         }
 
-        if (password.value == '') {
-            error.push('Debe escribir su contraseña')
-            password.classList.add('is-invalid')
-        } else if (password.value.length < 8) {
-            error.push('Debe contener al menos 8 caracteres')
+        if (password.value.length < 8) {
+            error.push('La contraseña debe contener al menos 8 caracteres')
             password.classList.add('is-invalid')
         }else {
             password.classList.remove('is-invalid')
