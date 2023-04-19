@@ -20,7 +20,6 @@ const controllerProduct = {
         try {
 
             const product = await db.Equipos.findByPk(req.params.id);
-            console.log(product)
             res.render('products/detailProduct.ejs', { product: product });
 
         } catch (error) {
@@ -46,7 +45,6 @@ createProcess: async (req, res) =>{
 
         const errors = validationResult(req);
                 if (!errors.isEmpty()) {
-                    console.log(errors);
                     return res.render("products/create", {errors : errors.mapped(), allMarca: allMarca, products: products, allCategoria: allCategoria})
                     
                 }
@@ -60,20 +58,19 @@ createProcess: async (req, res) =>{
         });
         return res.redirect('create');
     } catch (error) {
-        console.log(error);
         res.send(error)
 }},
 
 edit: async function (req, res) {
     try {
-        console.log(req.params)
         const equipoId = req.params.id;
         const product = db.Equipos.findByPk(equipoId,  { include: ['marca', 'categoria'] });
         const marcaPromise = db.Marca.findAll();
         const categoriaPromise = db.Categoria.findAll();
-        const [Equipos, allMarca, allCategoria] = await Promise.all([product, marcaPromise, categoriaPromise]);
-        res.render("products/edit",{ product, Equipos, allMarca: allMarca, allCategoria:allCategoria });
+        const [Equipo, allMarca, allCategoria] = await Promise.all([product, marcaPromise, categoriaPromise]);
+        res.render("products/edit",{ Equipo, allMarca: allMarca, allCategoria:allCategoria });
     } catch (error) {
+        console.log(error)
         res.send(error);
     }
 },
@@ -101,12 +98,13 @@ edit: async function (req, res) {
                 caracteristicas: req.body.caracteristicas,
                 marca_id: req.body.marca_id,
                 categoria_id: req.body.categoria_id,
-                imagen: req.file.imagen,
+                imagen: req.body.img,
         }, {
             where: { id: equipoId }
         });
             res.redirect('/products/create');
         } catch (error) {
+            console.log(error)
             res.send(error);
         }
     }

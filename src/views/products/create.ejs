@@ -129,9 +129,9 @@
                                                             name="categoria_id" 
                                                             id="categoria" 
                                                             >
-                                                            <option value="" disabled selected>- Seleccione la Categoria - </option>
+                                                            <option value='' disabled selected>- Seleccione la Categoria - </option>
                                                             <% allCategoria.forEach(categoria => { %>
-                                                            <option value=0 <%= categoria.id %>><%= categoria.categoria %></option>
+                                                            <option value='<%= categoria.id %>'><%= categoria.categoria %></option>
                                                             <% }); %>
                                                         </select>
                                                         <label class="form-label" for="category">Seleccione categoria</label>

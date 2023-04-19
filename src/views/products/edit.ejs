@@ -23,7 +23,7 @@
                                                 <h5 class="mb-0">Elija lo que va a modificar</h5>
                                             </div>
                                             <ul class="error"></ul>
-                                            <form action="/products/list/<%= Equipos.id %>?_method=PUT" method="POST" class="mt-4 form">
+                                            <form action="/products/list/<%= Equipo.id %>?_method=PUT" method="POST" class="mt-4 form">
                                                 <div class="form-outline form-white mb-4">
                                                     <select 
                                                         name="marca_id" 
@@ -31,7 +31,7 @@
                                                         required>
                                                         <option value="" disabled selected>- Seleccione la Marca - </option>
                                                         <% allMarca.forEach(marca => { %>
-                                                        <option value="<%= marca.id %>" <% if (Equipos.marca.id == marca.id) { %><%= 'selected' %><% }; %>><%= marca.nombre %></option>
+                                                        <option value="<%= marca.id %>" <% if (Equipo.marca.id == marca.id) { %><%= 'selected' %><% }; %>><%= marca.nombre %></option>
                                                         <% }); %>
                                                     </select>
                                                 </div>
@@ -39,7 +39,7 @@
                                                     <input 
                                                         name="modelo" 
                                                         type="text" 
-                                                        value='<%=Equipos.modelo%>'<%= product.modelo %> 
+                                                        value='<%=Equipo.modelo%>'
                                                         id="productModel"
                                                         class="form-control form-control-lg" 
                                                         siez="17"
@@ -53,8 +53,7 @@
                                                         id="descriptionText"
                                                         class="form-control form-control-lg" 
                                                         siez="17"
-                                                        placeholder="Especificaciones" 
-                                                        value='<%=Equipos.caracteristicas%>'><%=Equipos.caracteristicas%></textarea>
+                                                        placeholder="Especificaciones"><%=Equipo.caracteristicas%></textarea>
                                                     <label class="form-label" for="descriptionText">Descripcion</label>
                                                 </div>
                                                 <div class="form-outline form-white mb-4">
@@ -64,7 +63,7 @@
                                                         required>
                                                         <option value="" >- Seleccione la Categoria - </option>
                                                         <% allCategoria.forEach(categoria => { %>
-                                                        <option value='<%= categoria.id %>' <% if (Equipos.categoria.id == categoria.id) { %><%= 'selected' %><% }; %>><%= categoria.categoria %></option>
+                                                        <option value='<%= categoria.id %>' <% if (Equipo.categoria.id == categoria.id) { %><%= 'selected' %><% }; %>><%= categoria.categoria %></option>
                                                         <% }); %>
                                                     </select>
                                                     <label class="form-label" for="category">Seleccione categoria</label>
@@ -73,12 +72,23 @@
                                                     <input 
                                                         name="precio" 
                                                         type="number" 
-                                                        value="<%=Equipos.precio %>" 
+                                                        value="<%=Equipo.precio %>" 
                                                         id="price"
                                                         class="form-control form-control-lg" 
                                                         siez="17"
                                                         placeholder="Precio del equipo" />
                                                     <label class="form-label" for="price">Precio</label>
+                                                </div>
+                                                <div class="form-outline form-white mb-4">
+                                                    <input 
+                                                        name="img" 
+                                                        type="text" 
+                                                        value='<%=Equipo.imagen%>'
+                                                        id="productModel"
+                                                        class="form-control form-control-lg" 
+                                                        siez="17"
+                                                        placeholder="Modelo del equipo" />
+                                                    <label class="form-label" for="productModel">IMG</label>
                                                 </div>
                                                 <div class="d-flex justify-content-center">
                                                     <button type="submit" class="btn-primary btn btn-block btn-lg text-white">
