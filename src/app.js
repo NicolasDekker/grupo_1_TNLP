@@ -13,6 +13,8 @@ const cookies = require('cookie-parser');
 const mainRouter = require('./routes/mainRouter');
 const userRouter = require('./routes/userRouter');
 const productsRouter = require('./routes/productsRouter');
+const userApiRouter = require('./routes/userApiRouter');
+const productsApiRouter = require('./routes/productsApiRouter');
 
 app.use(express.urlencoded({extended: false}));
 
@@ -42,6 +44,8 @@ app.listen(process.env.PORT || 3000, () => {
 app.use('/', mainRouter);
 app.use('/users', userRouter);
 app.use('/products', productsRouter);
+app.use('/api/users', userApiRouter)
+app.use('/api/products', productsApiRouter)
 
 
 
