@@ -12,7 +12,6 @@ function rdy(){
     }
     let fullEmptyCard = document.getElementById('fullEmptyCard');
     fullEmptyCard.addEventListener('click',deletedCart);
-    console.log(fullEmptyCard)
 }
 
 function displayCart(){
