@@ -35,8 +35,11 @@ En Melon no se basan en los mismos productos, pero nos encantó el diseño de ve
 
 
 
-Link al repositorio de GitHub:
+Link del repositorio de GitHub (Proyecto):
 https://github.com/NicolasDekker/grupo_1_TNLP
+
+Link del repositorio de GitHub (Proyecto React):
+https://github.com/NicolasDekker/TNLP-React.git
 
 Link a Trello:
 https://trello.com/b/BGXtPFJ8/digital-house-grupo-1
